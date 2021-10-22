@@ -53,7 +53,8 @@ public class UserInterFace {
 					String pw = sc.next();
 
 					mb = lm.login(id, pw);
-					if (mb.getId() == null) {
+			
+					if (mb == null) {
 						System.out.println("회원정보가 없습니다.");
 						reLogin = "s";
 
@@ -243,7 +244,7 @@ public class UserInterFace {
 			System.out.println("\n");
 		System.out.println("┌──┬────────────────────────────────────────────┬──┐");
 		System.out.println("│  │           ●○●○ BaseBall Game ○●○●    \t│  │");
-		System.out.println("│  │        " + mb.getId() + "님 환영합니다!!" + "\t│  │");
+		System.out.println("│  │      	  " + mb.getId() + "님 환영합니다!!"      + "\t\t│  │");
 		System.out.println("│  │                                      \t│  │");
 		System.out.println("│  │       <[1]선수뽑기> <[2]게임시작> <[3]종료>\t│  │");
 		System.out.println("└──┴────────────────────────────────────────────┴──┘");

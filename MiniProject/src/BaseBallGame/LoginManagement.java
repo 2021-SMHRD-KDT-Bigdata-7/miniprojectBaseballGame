@@ -84,8 +84,27 @@ public class LoginManagement {
 
 	}
 
-	public void login(String id, String pw) {
+	public Member login(String id, String pw) {
+		
+		dbConn();
 
+		sql = "select * from g_user where id = ? and pw = ?";
+
+
+		try {
+			psmt = conn.prepareStatement(sql);
+			psmt.setString(1, mb.getId());
+			psmt.setString(2, mb.getPw());
+
+			result = psmt.executeUpdate();
+
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally {
+			dbClose();
+		}
+		return mb;
+		
 	}
 
 }

@@ -165,23 +165,7 @@ public class UserInterFace {
 			System.out.println("올바른 숫자를 입력하세요.");
 		}
 		
-		
-//		
-//		GamePlay gp = new GamePlay();
-//		Random rd = new Random();
-//		
-//		int[] arr = new int[5];
-//		
-//		for(int i =0; i<5; i++) {
-//			arr[i] = rd.nextInt(30)+1;
-//		}
-//		
-//		for(int i=0; i<5; i++) {
-//			AllPlayer player =  gp.selectPlayer(arr[i]);
-//			System.out.println(player);
-//		}
-//		
-
+	
 	}
 
 	public void openingPrint1() {

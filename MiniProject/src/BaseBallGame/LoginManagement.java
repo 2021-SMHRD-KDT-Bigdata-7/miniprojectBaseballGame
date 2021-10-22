@@ -75,6 +75,7 @@ public class LoginManagement {
 			result = psmt.executeUpdate();
 
 		} catch (Exception e) {
+			e.printStackTrace();
 		} finally {
 			dbClose();
 		}
@@ -83,11 +84,10 @@ public class LoginManagement {
 	}
 
 	public Member login(String id, String pw) {
-		
+
 		dbConn();
 
 		sql = "select * from g_user where id = ? and pw = ?";
-
 
 		try {
 			psmt = conn.prepareStatement(sql);
@@ -95,20 +95,22 @@ public class LoginManagement {
 			psmt.setString(2, pw);
 
 			rs = psmt.executeQuery();
-			
-			mb.setId(rs.getString(1));
-			mb.setPw(rs.getNString(2));
-			mb.setRank(rs.getInt(3));
-			
-			
+			if (rs.next()) {
+				mb.setId(rs.getString(1));
+				mb.setPw(rs.getNString(2));
+				mb.setRank(rs.getInt(3));
+			} else {
+				mb = null;
+			}
 
 		} catch (Exception e) {
-			
+			e.printStackTrace();
+
 		} finally {
 			dbClose();
 		}
 		return mb;
-		
+
 	}
 
 }

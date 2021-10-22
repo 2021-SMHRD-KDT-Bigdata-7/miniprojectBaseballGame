@@ -178,7 +178,8 @@ public class UserInterFace {
             
             break;
 		case 2:
-
+			gp.battlePlayer();
+			break;
 		case 3:
 			System.out.println("종료합니다.");
 			try {

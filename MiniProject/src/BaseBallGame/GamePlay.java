@@ -102,17 +102,21 @@ public class GamePlay {
 		System.out.println(ap.getStat() + "\t");
 	}
 
-	public void battlePlayer(int Score) {
+	public void battlePlayer() {
+		
 		// a는 스트라이크 개수
 		int a = 0;
 		// vic는 점수
 		int score = 0;
+		int add=0;
 		while (true) {
+			dbConn();
+			
 			System.out.println("게임을 시작합니다.");
 			if ((score < 10) && (a < 3)) {
 				System.out.println("선수를 선택하세요.");
 				try {
-					sql = "select a.p_name, m.num, p_stat from allplayer a,myplayer m where a.id=m.id ";
+					sql = "select a.p_name, m.num, a.p_stat from allplayer a,myplayer m where a.p_id=m.p_id";
 					psmt = conn.prepareStatement(sql);
 					rs = psmt.executeQuery();
 					int m_num = 0;
@@ -125,7 +129,7 @@ public class GamePlay {
 						System.out.println("[" + m_num + "]" + " 번 " + p_name + " 능력치:" + p_stat);
 					}
 					int ch = sc.nextInt();
-					sql = "select a.p_name, m.num from allplayer a,myplayer m where a.id=m.id and m.num =?";
+					sql = "select a.p_name, m.num from allplayer a,myplayer m where a.p_id=m.p_id and m.num =?";
 					psmt = conn.prepareStatement(sql);
 					psmt.setInt(1, ch);
 					rs = psmt.executeQuery();
@@ -138,13 +142,14 @@ public class GamePlay {
 					}
 					while (a < 3 || score < 10) {
 						int enemy =0;
-						sql = "select a.p_name from allplayer a where not in table myplayer m";
-						psmt = conn.prepareStatement(sql);
+						Random rd =new Random();
+						enemy=rd.nextInt(100)+1;
+						System.out.println("상대 선수의 능력치는 "+enemy+"입니다." );
 						if (Math.abs(p_stat - enemy) < 10) {
 							System.out.println("스트라이크");
 							a++;
-						} else if (Math.abs(p_stat - 1995) < 30) {
-							System.out.println("안타 1점 먹고 들어갑니다.");
+						} else if (Math.abs(p_stat - enemy) < 30) {
+							System.out.println("안타");
 							score = +1;
 							a = 0;
 						} else {
@@ -161,7 +166,7 @@ public class GamePlay {
 				
 			} else if (a >= 3) {
 				System.out.println("쓰리 스트라이크 선수교체!");
-				System.out.println("당신은 패배자 입니다.한 판 더 하시겠습니까 y/n?");
+				System.out.println("당신은 패배했습니다.한 판 더 하시겠습니까 y/n?");
 				String c = sc.next();
 				if (c.equals("y") || c.equals("Y")) {
 					a = 0;
@@ -172,6 +177,7 @@ public class GamePlay {
 				}
 			} else if (score >= 10) {
 				System.out.println("게임 승리!!");
+				add=1;
 				System.out.println("게임을 이겼습니다.한 판 더 하시겠습니까 y/n?");
 				String c = sc.next();
 				if (c.equals("y") || c.equals("Y")) {
@@ -183,6 +189,19 @@ public class GamePlay {
 				}
 			}
 		}
+		if (add>0) {
+		  try {
+			 String id = "";
+			 sql="update g_user set score=score+1 where id='?'";
+			 psmt = conn.prepareStatement(sql);
+			 psmt.setString(1, id);
+			 psmt.executeUpdate();
+		 } catch (Exception e) {
+			e.printStackTrace();
+		 } finally {
+			dbClose();
+		 }
+	   }
 	}
 	private void getRank(int rank) {
 
@@ -205,5 +224,6 @@ public class GamePlay {
 		} finally {
 			dbClose();
 		}
+		
 	}
 }

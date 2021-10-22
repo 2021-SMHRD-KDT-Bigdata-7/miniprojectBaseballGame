@@ -6,6 +6,8 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.util.Scanner;
 
+import LIbrary.BookVo;
+
 public class GamePlay {
 	Connection conn = null;
 	PreparedStatement psmt = null;
@@ -108,6 +110,21 @@ public class GamePlay {
 		     }
 	       }
 	private void getRank() {
-		
+		dbConn();
+		int a=0;
+		try {
+			while(true) {
+				a++;
+				System.out.print(a+"위");
+				sql = "select id,count.int(점수) from member order bycount.int(점수)" ;
+				psmt = conn.prepareStatement(sql);
+				rs = psmt.executeQuery();
+			    }
+		}catch(Exception e) {
+			e.printStackTrace();
+		}finally {
+			dbClose();
+		}
+
 	}
 }

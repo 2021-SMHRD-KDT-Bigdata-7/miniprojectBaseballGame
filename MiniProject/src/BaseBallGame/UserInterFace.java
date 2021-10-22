@@ -37,7 +37,8 @@ public class UserInterFace {
 
 			// 로그인
 			case 1:
-				while (mb == null) {
+				String reLogin = "";
+				while (mb == null || reLogin.equals("y")) {
 					loginPrint();
 
 					System.out.print("아이디 >> ");
@@ -49,35 +50,69 @@ public class UserInterFace {
 					mb = lm.login(id, pw);
 					if (mb == null) {
 						System.out.println("회원정보가 없습니다.");
-						System.out.println("다시 입력해주세요.");
+						reLogin = "s";
+
+						while (reLogin.equals("s")) {
+							System.out.println("다시 로그인 하시겠습니까? [y,n]");
+							reLogin = sc.next();
+
+							if (reLogin.equals("y") || reLogin.equals("n")) {
+								break;
+							} else {
+								System.out.println("y와 n중에 입력해주세요");
+								reLogin = "s";
+							}
+						}
+
+					} else {
+						System.out.println("로그인에 성공하였습니다...");
+						key = 3;
+						try {
+							Thread.sleep(1000);
+						} catch (InterruptedException e) {
+							e.printStackTrace();
+						}
+						break;
+
 					}
 				}
-				System.out.println("로그인에 성공하였습니다...");
-				try {
-					Thread.sleep(1000);
-				} catch (InterruptedException e) {
-					e.printStackTrace();
-				}
-				break;
 
-			// 회원가입
+				// 회원가입
 			case 2:
-				int result;
-				registerPrint();
-				
-				System.out.print("아이디 >>");
-				String id = sc.next();
+				int result = 0;
+				String reRegister = "";
+				while (result <= 0 || reRegister.equals("y")) {
+					registerPrint();
 
-				System.out.print("비밀번호 >>");
-				String pw = sc.next();
-				result = lm.register(id,pw);
-				
-				if(result>0 ) {
-					System.out.println("회원가입에 성공하였습니다!!");
-				}else {
-					System.out.println("회원가입에 실패하였습니다 ㅜㅜ");
-				}			
-				
+					System.out.print("아이디 >>");
+					String id = sc.next();
+
+					System.out.print("비밀번호 >>");
+					String pw = sc.next();
+					result = lm.register(id, pw);
+
+					if (result > 0) {
+						System.out.println("회원가입에 성공하였습니다!!");
+						reRegister = "n";
+						
+						break;
+					} else {
+						System.out.println("다른 회원이 있습니다!");
+
+						while (reRegister.equals("s")) {
+							System.out.println("다시 회원가입 하시겠습니까? [y,n]");
+							reRegister = sc.next();
+
+							if (reRegister.equals("y") || reRegister.equals("n")) {
+								break;
+							} else {
+								System.out.println("올바른 글자를 입력해주세요.");
+								reRegister = "s";
+
+							}
+						}
+					}
+				}
 				break;
 
 			case 3:
@@ -90,7 +125,28 @@ public class UserInterFace {
 
 		}
 
-		mainLoginPrint();
+		mainLoginPrint();		
+		System.out.print(">> ");
+		key = sc.nextInt();
+		
+		switch(key) {
+		case 1:
+			
+		case 2:
+			
+		case 3:
+			System.out.println("종료합니다.");
+			try {
+				Thread.sleep(1000);
+			} catch (InterruptedException e) {
+				e.printStackTrace();
+			}			
+			System.exit(0);
+			default:
+				System.out.println("올바른 숫자를 입력하세요.");
+		}
+		
+		
 
 	}
 
@@ -171,10 +227,8 @@ public class UserInterFace {
 		System.out.println("│  │           ●○●○ BaseBall Game ○●○●    \t│  │");
 		System.out.println("│  │        " + mb.getId() + "님 환영합니다!!" + "\t│  │");
 		System.out.println("│  │                                      \t│  │");
-		System.out.println("│  │           <[1]선수뽑기>  <[2]게임시작>  \t│  │");
+		System.out.println("│  │       <[1]선수뽑기> <[2]게임시작> <[3]종료>\t│  │");
 		System.out.println("└──┴────────────────────────────────────────────┴──┘");
-		System.out.print(">>");
-
 	}
 
 }

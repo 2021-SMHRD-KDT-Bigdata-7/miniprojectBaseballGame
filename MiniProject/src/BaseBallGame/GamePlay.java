@@ -137,7 +137,10 @@ public class GamePlay {
 						System.out.println("선택한 선수의 능력치" + p_stat);
 					}
 					while (a < 3 || score < 10) {
-						if (Math.abs(p_stat - 1995) < 10) {
+						int enemy =0;
+						sql = "select a.p_name from allplayer a where not in table myplayer m";
+						psmt = conn.prepareStatement(sql);
+						if (Math.abs(p_stat - enemy) < 10) {
 							System.out.println("스트라이크");
 							a++;
 						} else if (Math.abs(p_stat - 1995) < 30) {
@@ -149,12 +152,13 @@ public class GamePlay {
 							score = +2;
 							a = 0;
 						}
-					}
+					  }			
 				} catch (Exception e) {
 					e.printStackTrace();
 				} finally {
 					dbClose();
 				}
+				
 			} else if (a >= 3) {
 				System.out.println("쓰리 스트라이크 선수교체!");
 				System.out.println("당신은 패배자 입니다.한 판 더 하시겠습니까 y/n?");

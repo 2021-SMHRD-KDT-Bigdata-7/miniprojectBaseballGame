@@ -4,7 +4,8 @@ import java.util.Random;
 import java.util.Scanner;
 
 public class UserInterFace {
-
+	Random rd =new Random();
+	GamePlay gp=new GamePlay();
 	// 사용자 키보드값
 	int key = 0;
 	Scanner sc;
@@ -151,7 +152,31 @@ public class UserInterFace {
 
 		switch (key) {
 		case 1:
-
+		    int[] arr = new int[5];
+	         
+            for(int i =0; i<5; i++) {
+            arr[i] = rd.nextInt(30)+1;
+               for(int j =0; j<i; j++) {
+                  if(arr[i]==arr[j]) {
+                     i--;
+                  }
+               }
+            }
+            for(int i=1; i<=5; i++) {
+               System.out.print("["+i+"]"+"\t");
+            }
+            System.out.println();
+            for(int i=0; i<5; i++) {
+                AllPlayer player =  gp.selectPlayer(arr[i]);
+                System.out.print(player.getName()+"\t"); 
+             }
+            System.out.println();
+            for(int i=0; i<5; i++) {
+                AllPlayer player =  gp.selectPlayer(arr[i]);
+                System.out.print(player.getStat()+"\t"); 
+             }
+            
+            break;
 		case 2:
 
 		case 3:

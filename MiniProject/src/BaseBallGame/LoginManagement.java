@@ -68,14 +68,13 @@ public class LoginManagement {
 
 		try {
 			psmt = conn.prepareStatement(sql);
-			psmt.setString(1, mb.getId());
-			psmt.setString(2, mb.getPw());
+			psmt.setString(1, id);
+			psmt.setString(2, pw);
 			psmt.setInt(3, score);
 
 			result = psmt.executeUpdate();
 
 		} catch (Exception e) {
-			e.printStackTrace();
 		} finally {
 			dbClose();
 		}
@@ -92,8 +91,8 @@ public class LoginManagement {
 
 		try {
 			psmt = conn.prepareStatement(sql);
-			psmt.setString(1, mb.getId());
-			psmt.setString(2, mb.getPw());
+			psmt.setString(1, id);
+			psmt.setString(2, pw);
 
 			rs = psmt.executeQuery();
 			

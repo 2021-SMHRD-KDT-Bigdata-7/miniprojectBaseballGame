@@ -9,7 +9,7 @@ public class UserInterFace {
 	int key = 0;
 	Scanner sc;
 	LoginManagement lm;
-	Member mb;
+	Member mb = new Member();
 
 	public UserInterFace() {
 		sc = new Scanner(System.in);
@@ -54,6 +54,8 @@ public class UserInterFace {
 			// 로그인
 			case 1:
 				String reLogin = "";
+				reLogin = "y";
+
 				while (mb == null || reLogin.equals("y")) {
 					loginPrint();
 
@@ -82,18 +84,24 @@ public class UserInterFace {
 
 					} else {
 						System.out.println("로그인에 성공하였습니다...");
-						key = 3;
+
 						try {
 							Thread.sleep(1000);
 						} catch (InterruptedException e) {
 							e.printStackTrace();
 						}
 						break;
-
 					}
-				}
 
-				// 회원가입
+				}
+				if (key == 1) {
+					reLogin = "n";
+					key = 3;
+					break;
+				}
+				break;
+
+			// 회원가입
 			case 2:
 				int result = 0;
 				String reRegister = "";
@@ -110,20 +118,24 @@ public class UserInterFace {
 					if (result > 0) {
 						System.out.println("회원가입에 성공하였습니다!!");
 						reRegister = "n";
-						
+
 						break;
 					} else {
 						System.out.println("다른 회원이 있습니다!");
+						reRegister = "r";
 
-						while (reRegister.equals("s")) {
+						while (reRegister.equals("r")) {
 							System.out.println("다시 회원가입 하시겠습니까? [y,n]");
 							reRegister = sc.next();
 
 							if (reRegister.equals("y") || reRegister.equals("n")) {
+								if (reRegister.equals("n")) {
+									result = 1;
+								}
 								break;
 							} else {
 								System.out.println("올바른 글자를 입력해주세요.");
-								reRegister = "s";
+								reRegister = "r";
 
 							}
 						}
@@ -141,28 +153,26 @@ public class UserInterFace {
 
 		}
 
-		mainLoginPrint();		
+		mainLoginPrint();
 		System.out.print(">> ");
 		key = sc.nextInt();
-		
-		switch(key) {
+
+		switch (key) {
 		case 1:
-			
+
 		case 2:
-			
+
 		case 3:
 			System.out.println("종료합니다.");
 			try {
 				Thread.sleep(1000);
 			} catch (InterruptedException e) {
 				e.printStackTrace();
-			}			
+			}
 			System.exit(0);
-			default:
-				System.out.println("올바른 숫자를 입력하세요.");
+		default:
+			System.out.println("올바른 숫자를 입력하세요.");
 		}
-		
-		
 
 	}
 

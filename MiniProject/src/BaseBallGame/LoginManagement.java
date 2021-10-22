@@ -96,9 +96,14 @@ public class LoginManagement {
 
 			rs = psmt.executeQuery();
 			
+			mb.setId(rs.getString(1));
+			mb.setPw(rs.getNString(2));
+			mb.setRank(rs.getInt(3));
+			
+			
 
 		} catch (Exception e) {
-			e.printStackTrace();
+			
 		} finally {
 			dbClose();
 		}

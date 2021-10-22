@@ -104,7 +104,6 @@ public class LoginManagement {
 			}
 
 		} catch (Exception e) {
-			e.printStackTrace();
 
 		} finally {
 			dbClose();

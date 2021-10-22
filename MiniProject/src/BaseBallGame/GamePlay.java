@@ -50,7 +50,7 @@ public class GamePlay {
 			}
 		} catch (Exception e) {
 			e.printStackTrace();
-			System.out.println("오류가 발생했습니다.");
+			System.out.println("게임을 종료하겠습니다.");
 		}
 	}
 	public void selectPlayer(){
@@ -107,7 +107,7 @@ public class GamePlay {
 		       }
 		     }
 	       }
-	private void gerRank() {
+	private void getRank() {
 		
 	}
 }

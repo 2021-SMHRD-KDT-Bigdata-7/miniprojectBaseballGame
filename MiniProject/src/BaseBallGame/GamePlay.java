@@ -4,15 +4,17 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.util.ArrayList;
 import java.util.Scanner;
-
-import LIbrary.BookVo;
 
 public class GamePlay {
 	Connection conn = null;
 	PreparedStatement psmt = null;
 	ResultSet rs = null;
 	Scanner sc =new Scanner(System.in);
+	LoginManagement lm =new LoginManagement();
+	Member mm=new Member();
 
 	// eseuteUpdate()의 결과를 담을수 있는 변수
 	int result = 0;
@@ -26,10 +28,11 @@ public class GamePlay {
 			Class.forName("oracle.jdbc.driver.OracleDriver");
 
 			// 2.DB연결
-			String url = "jdbc:oracle:thin:@192.168.1.241:1521:xe";
-			String user = "hr";
-			String password = "hr";
+			String url = "jdbc:oracle:thin:@project-db-stu.ddns.net:1524:xe";
+			String user = "cgi_2_2_1022";
+			String password = "smhrd2";
 			conn = DriverManager.getConnection(url, user, password);
+			
 
 		} catch (Exception e) {
 			// Exception
@@ -65,66 +68,35 @@ public class GamePlay {
 		
 	}
 	public void battlePlayer(int Score) {
+		
+		dbConn();
 		//int a =(스트라이크 개수)
 		int a=0;
 		//int score =(점수)
 		int score =0;
-		while(true){
-		 if((score<10) && (a<3)){
-			 //System.out.println("한화가 또 또 이겼습니다");
-		   if (Math.abs(my_pl_stat-en_pl_stat)<10){
-			   System.out.println("스트라이크");
-		   a++;
-		     if(a>2){
-		    	 System.out.println("스트라이크 삼진 아웃 선수교체");
-		         a=0;
-		     }
-		  }else if(Math.abs(my_pl_stat-en_pl_stat)<30){
-		  a=0;
-		  System.out.println("안타! 1점 들어갑니다");
-		  score=+1;
-		  }else{
-		  a=0;
-		  score=+2;
-		  System.out.println("홈런");
-		  }
-		 } else if(score>=10){
-			 System.out.println("게임 승리! 한 판 더 하시겠습니까 y/n?");
-			 String c =sc.next();
-			 //count.int++;
-			    if(c.equals("y") || c.equals("Y")){
-			    	System.out.println("게임을 종료합니다.");
-			    break;
-		        }
-		 }else if(a>=3){
-			 System.out.println("당신은 패배자 입니다.한 판 더 하시겠습니까 y/n?");
-		     String c =sc.next();
-		       if(c.equals("y") || c.equals("Y")){
-		    	System.out.println("게임을 종료합니다.");
-		        break;
-		        }
-		       }else {
-		    	System.out.println("게임을 종료합니다.");
-		    	break;
-		       }
-		     }
-	       }
-	private void getRank() {
+	}
+
+	private void getRank(int rank) {
+		
 		dbConn();
 		int a=0;
+				
 		try {
-			while(true) {
+			sql = "select id,score from g_user order by score";
+			psmt = conn.prepareStatement(sql);
+			rs = psmt.executeQuery();
+			while(rs.next()) {
 				a++;
 				System.out.print(a+"위");
-				sql = "select id,count.int(점수) from member order bycount.int(점수)" ;
-				psmt = conn.prepareStatement(sql);
-				rs = psmt.executeQuery();
-			    }
+				System.out.print(rs.getString("id"));
+				System.out.println(rs.getInt("rank"));
+				System.out.println();
+			}
 		}catch(Exception e) {
 			e.printStackTrace();
 		}finally {
 			dbClose();
-		}
-
-	}
+		}		
+   }
 }
+

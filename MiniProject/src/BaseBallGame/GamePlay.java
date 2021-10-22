@@ -224,6 +224,6 @@ public class GamePlay {
 		} finally {
 			dbClose();
 		}
-		
+		//어떠하지?
 	}
 }

@@ -62,7 +62,7 @@ public class LoginManagement {
 
 		dbConn();
 
-		sql = "insert into g_user values (?,?,?)";
+		sql = "insert into g_user(id,pw,score) values (?,?,?)";
 
 		int score = 0;
 

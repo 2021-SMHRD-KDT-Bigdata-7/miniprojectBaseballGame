@@ -4,9 +4,8 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.util.Random;
 import java.util.Scanner;
-
-import LIbrary.BookVo;
 
 public class GamePlay {
 	Connection conn = null;
@@ -57,6 +56,7 @@ public class GamePlay {
 	}
 	public void selectPlayer(){
 	//allplayer		
+		
 	}
 	public void registerPlayer() {
 	//allplayer	

@@ -38,7 +38,7 @@ public class LoginManagement {
 		}
 	}
 
-	// 끝나는 메소드
+	// 끝나는 메소드s
 	public void dbClose() {
 
 		try {

@@ -6,7 +6,10 @@ public class Main {
 
 		UserInterFace u = new UserInterFace();
 		u.start();
-
+		
+		GamePlay gp = new GamePlay();
+		
+		
 	}
 
 }

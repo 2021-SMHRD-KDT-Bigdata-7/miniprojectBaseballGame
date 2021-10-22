@@ -2,16 +2,21 @@ package BaseBallGame;
 
 public class AllPlayer {
 
-	
-	private int id;
+	private String id;
 	private String name;
 	private int stat;
-	
-	public void player() {
-		
+
+	public AllPlayer() {
 	}
 
-	public int getId() {
+	public AllPlayer(String id, String name, int stat) {
+		super();
+		this.id = id;
+		this.name = name;
+		this.stat = stat;
+	}
+
+	public String getId() {
 		return id;
 	}
 
@@ -27,8 +32,5 @@ public class AllPlayer {
 	public String toString() {
 		return "Allplayer [id=" + id + ", name=" + name + ", stat=" + stat + "]";
 	}
-	
-	
-
 
 }

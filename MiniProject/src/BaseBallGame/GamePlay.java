@@ -4,12 +4,9 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
-<<<<<<< HEAD
 import java.util.Random;
-=======
 import java.sql.SQLException;
 import java.util.ArrayList;
->>>>>>> branch 'master' of https://github.com/2021-SMHRD-KDT-Bigdata-7/miniprojectBaseballGame.git
 import java.util.Scanner;
 
 public class GamePlay {
@@ -17,8 +14,10 @@ public class GamePlay {
 	PreparedStatement psmt = null;
 	ResultSet rs = null;
 	Scanner sc =new Scanner(System.in);
+	Random rd = new Random();
 	LoginManagement lm =new LoginManagement();
-	Member mm=new Member();
+	Member mm = new Member();
+	AllPlayer ap = new AllPlayer();
 
 	// eseuteUpdate()의 결과를 담을수 있는 변수
 	int result = 0;
@@ -62,15 +61,42 @@ public class GamePlay {
 			System.out.println("게임을 종료하겠습니다.");
 		}
 	}
-	public void selectPlayer(){
+	public AllPlayer selectPlayer(int p_id){
 	//allplayer		
+		AllPlayer player = null;
 		
+		dbConn();
+		
+		sql = "select * from allplayer where p_id = ?";
+
+		try {
+			psmt = conn.prepareStatement(sql);
+			psmt.setInt(1, p_id);
+			
+			rs = psmt.executeQuery();
+			
+			if(rs.next()) {
+				String id = rs.getString(1);
+				String name = rs.getString(2);
+				int stat = rs.getInt(3);
+				
+				player = new AllPlayer(id, name, stat);
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally {
+			dbClose();
+		}
+		
+		return player;
 	}
 	public void registerPlayer() {
 	//allplayer	
 	}
 	public void printPlayer() {
 		
+		System.out.println(ap.getName()+"\t");
+		System.out.println(ap.getStat()+"\t");
 	}
 	public void battlePlayer(int Score) {
 		

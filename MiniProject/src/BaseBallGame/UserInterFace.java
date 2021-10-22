@@ -1,5 +1,6 @@
 package BaseBallGame;
 
+import java.util.Random;
 import java.util.Scanner;
 
 public class UserInterFace {
@@ -17,6 +18,21 @@ public class UserInterFace {
 	}
 
 	public void start() {
+		
+		GamePlay gp = new GamePlay();
+		Random rd = new Random();
+		
+		int[] arr = new int[5];
+		
+		for(int i =0; i<5; i++) {
+			arr[i] = rd.nextInt(30)+1;
+		}
+		
+		for(int i=0; i<5; i++) {
+			AllPlayer player =  gp.selectPlayer(arr[i]);
+			System.out.println(player);
+		}
+		
 
 		// ¿ÀÇÁ´× ¿µ»ó
 		openingPrint1();

@@ -8,7 +8,6 @@ import java.util.Scanner;
 
 public class LoginManagement {
 
-//	Scanner sc = new Scanner(System.in);
 	Connection conn = null;
 	PreparedStatement psmt = null;
 	ResultSet rs = null;
@@ -27,9 +26,9 @@ public class LoginManagement {
 			Class.forName("oracle.jdbc.driver.OracleDriver");
 
 			// 2.DB¿¬°á
-			String url = "jdbc:oracle:thin:@192.168.1.241:1521:xe";
-			String user = "hr";
-			String password = "hr";
+			String url = "jdbc:oracle:thin:@project-db-stu.ddns.net:1524:xe";
+			String user = "cgi_2_2_1022";
+			String password = "smhrd2";
 			conn = DriverManager.getConnection(url, user, password);
 
 		} catch (Exception e) {
@@ -96,7 +95,8 @@ public class LoginManagement {
 			psmt.setString(1, mb.getId());
 			psmt.setString(2, mb.getPw());
 
-			result = psmt.executeUpdate();
+			rs = psmt.executeQuery();
+			
 
 		} catch (Exception e) {
 			e.printStackTrace();

@@ -62,7 +62,7 @@ public class LoginManagement {
 
 		dbConn();
 
-		sql = "insert into g_user(id,pw,score) values (?,?,?)";
+		sql = "insert into g_user(id,pw,score,pick) values (?,?,?,?)";
 
 		int score = 0;
 
@@ -71,6 +71,7 @@ public class LoginManagement {
 			psmt.setString(1, id);
 			psmt.setString(2, pw);
 			psmt.setInt(3, score);
+			psmt.setInt(4, 5);
 
 			result = psmt.executeUpdate();
 

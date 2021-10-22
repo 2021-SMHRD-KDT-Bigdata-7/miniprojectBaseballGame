@@ -275,5 +275,5 @@ public class UserInterFace {
 		System.out.println("│  │       <[1]선수뽑기> <[2]게임시작> <[3]종료>\t│  │");
 		System.out.println("└──┴────────────────────────────────────────────┴──┘");
 	}
-
+	// 지워주세요우
 }

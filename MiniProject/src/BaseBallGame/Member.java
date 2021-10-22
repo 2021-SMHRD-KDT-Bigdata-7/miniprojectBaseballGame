@@ -5,12 +5,14 @@ public class Member {
 	private String id;
 	private String pw;
 	private int rank;
+	private int pick;
 	
-	public void member(String id, String pw, int rank) {
+	public void member(String id, String pw, int rank, int pick) {
 		
 		this.id=id;
 		this.pw=pw;
 		this.rank=rank;
+		this.pick=pick;
 		
 	}
 
@@ -39,10 +41,23 @@ public class Member {
 	public void setRank(int rank) {
 		this.rank = rank;
 	}
+	public int getPick() {
+		return pick;
+	}
+	public void setPick(int pick) {
+		this.pick = pick;
+	}
+
+
+
 	@Override
 	public String toString() {
-		return "Member [id=" + id + ", pw=" + pw + ", rank=" + rank + "]";
+		return "Member [id=" + id + ", pw=" + pw + ", rank=" + rank + ", pick=" + pick + "]";
 	}
+
+
+
+	
 
 
 }

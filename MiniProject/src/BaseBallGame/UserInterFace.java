@@ -150,11 +150,12 @@ public class UserInterFace {
 			}
 
 		}
+
 		while (key != 4) {
 			if (key == 5) {
-				mainLoginPrintNoClean();//뽑기했을 때, 바로 아래에 mainLogin창이 나오도록
+				mainLoginPrintNoClean();// 뽑기했을 때, 바로 아래에 mainLogin창이 나오도록
 			} else {
-				mainLoginPrint();//뽑기안한 기본 프린트
+				mainLoginPrint();// 뽑기안한 기본 프린트
 			}
 				System.out.print(">> ");
 				key = sc.nextInt();
@@ -175,7 +176,7 @@ public class UserInterFace {
 						}
 						for (int i = 0; i < 80; i++)
 							System.out.println("\n");
-						
+
 						for (int i = 1; i <= num; i++) {
 							System.out.print("[" + i + "]" + "\t");
 						}
@@ -213,7 +214,7 @@ public class UserInterFace {
 						break;
 					}
 				case 2:
-
+					gp.battlePlayer();
 					break;
 				case 3:
 
@@ -231,10 +232,12 @@ public class UserInterFace {
 				default:
 					System.out.println("올바른 숫자를 입력하세요.");
 				}
-			
+			}
 		}
 
-	}
+	
+
+	
 
 	public void openingPrint1() {
 		for (int i = 0; i < 80; i++)
@@ -326,5 +329,5 @@ public class UserInterFace {
 		System.out.println("│  │<[1]선수뽑기> <[2]게임시작> <[3]순위확인> <[4]종료>│  │");
 		System.out.println("└──┴────────────────────────────────────────────┴──┘");
 	}
-
+	// 지워주세요우
 }

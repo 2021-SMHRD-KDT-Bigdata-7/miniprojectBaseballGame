@@ -27,6 +27,20 @@ public class AllPlayer {
 	public int getStat() {
 		return stat;
 	}
+	
+	public void setId(String id) {
+		this.id = id;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+	
+	public void setStat(int stat) {
+		this.stat = stat;
+	}
+
+	
 
 	@Override
 	public String toString() {

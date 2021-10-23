@@ -4,23 +4,23 @@ import java.util.Random;
 import java.util.Scanner;
 
 public class UserInterFace {
-	Random rd =new Random();
-	GamePlay gp=new GamePlay();
-	// 사용자 키보드값
-	int key = 0;
+	Random rd = new Random();
+	GamePlay gp = new GamePlay();
+
 	Scanner sc;
 	LoginManagement lm;
 	Member mb = new Member();
+
+	// 사용자 키보드값
+	int key = 0;
 
 	public UserInterFace() {
 		sc = new Scanner(System.in);
 		lm = new LoginManagement();
 
 	}
-	//fds
-	public void start() {
-		
 
+	public void start() {
 
 		// 오프닝 영상
 		openingPrint1();
@@ -54,7 +54,7 @@ public class UserInterFace {
 					String pw = sc.next();
 
 					mb = lm.login(id, pw);
-			
+
 					if (mb == null) {
 						System.out.println("회원정보가 없습니다.");
 						reLogin = "s";
@@ -70,8 +70,8 @@ public class UserInterFace {
 								reLogin = "s";
 							}
 						}
-						if(reLogin.equals("n")) {
-							mb= new Member();	
+						if (reLogin.equals("n")) {
+							mb = new Member();
 							key = 0;
 						}
 
@@ -111,6 +111,11 @@ public class UserInterFace {
 					if (result > 0) {
 						System.out.println("회원가입에 성공하였습니다!!");
 						reRegister = "n";
+						try {
+							Thread.sleep(1000);
+						} catch (InterruptedException e) {
+							e.printStackTrace();
+						}
 
 						break;
 					} else {
@@ -145,53 +150,90 @@ public class UserInterFace {
 			}
 
 		}
-
-		mainLoginPrint();
-		System.out.print(">> ");
-		key = sc.nextInt();
-
-		switch (key) {
-		case 1:
-		    int[] arr = new int[5];
-	         
-            for(int i =0; i<5; i++) {
-            arr[i] = rd.nextInt(30)+1;
-               for(int j =0; j<i; j++) {
-                  if(arr[i]==arr[j]) {
-                     i--;
-                  }
-               }
-            }
-            for(int i=1; i<=5; i++) {
-               System.out.print("["+i+"]"+"\t");
-            }
-            System.out.println();
-            for(int i=0; i<5; i++) {
-                AllPlayer player =  gp.selectPlayer(arr[i]);
-                System.out.print(player.getName()+"\t"); 
-             }
-            System.out.println();
-            for(int i=0; i<5; i++) {
-                AllPlayer player =  gp.selectPlayer(arr[i]);
-                System.out.print(player.getStat()+"\t"); 
-             }
-            
-            break;
-		case 2:
-
-		case 3:
-			System.out.println("종료합니다.");
-			try {
-				Thread.sleep(1000);
-			} catch (InterruptedException e) {
-				e.printStackTrace();
+		while (key != 4) {
+			if (key == 5) {
+				mainLoginPrintNoClean();//뽑기했을 때, 바로 아래에 mainLogin창이 나오도록
+			} else {
+				mainLoginPrint();//뽑기안한 기본 프린트
 			}
-			System.exit(0);
-		default:
-			System.out.println("올바른 숫자를 입력하세요.");
+				System.out.print(">> ");
+				key = sc.nextInt();
+
+				switch (key) {
+				case 1:
+					if (mb.getPick() >= 1) {
+						int num = mb.getPick();
+						int[] arr = new int[num];
+
+						for (int i = 0; i < num; i++) {
+							arr[i] = rd.nextInt(30) + 1;
+							for (int j = 0; j < i; j++) {
+								if (arr[i] == arr[j]) {
+									i--;
+								}
+							}
+						}
+						for (int i = 0; i < 80; i++)
+							System.out.println("\n");
+						
+						for (int i = 1; i <= num; i++) {
+							System.out.print("[" + i + "]" + "\t");
+						}
+						System.out.println();
+						for (int i = 0; i < num; i++) {
+							AllPlayer player = gp.selectPlayer(arr[i]);
+							System.out.print(player.getName() + "\t");
+						}
+						System.out.println();
+						for (int i = 0; i < num; i++) {
+							AllPlayer player = gp.selectPlayer(arr[i]);
+							System.out.print(player.getStat() + "\t");
+
+							gp.playerRegist(mb.getId(), player.getId());
+
+						}
+						System.out.println();
+						System.out.println("↑ 내 선수들");
+						int count = mb.getPick();
+						for (int i = 0; i < num; i++) {
+							--count;
+						}
+						gp.playerPickRegist(mb.getId(), count);
+						mb.setPick(count);
+						key = 5;
+
+						break;
+					} else {
+						System.out.println("뽑을 수 있는 선수가 없습니다.");
+						try {
+							Thread.sleep(1000);
+						} catch (InterruptedException e) {
+							e.printStackTrace();
+						}
+						break;
+					}
+				case 2:
+
+					break;
+				case 3:
+
+					break;
+				case 4:
+					System.out.println("종료합니다.");
+					try {
+						Thread.sleep(1000);
+					} catch (InterruptedException e) {
+						e.printStackTrace();
+					}
+					System.exit(0);
+
+					break;
+				default:
+					System.out.println("올바른 숫자를 입력하세요.");
+				}
+			
 		}
-		
-	
+
 	}
 
 	public void openingPrint1() {
@@ -269,9 +311,19 @@ public class UserInterFace {
 			System.out.println("\n");
 		System.out.println("┌──┬────────────────────────────────────────────┬──┐");
 		System.out.println("│  │           ●○●○ BaseBall Game ○●○●    \t│  │");
-		System.out.println("│  │      	  " + mb.getId() + "님 환영합니다!!"      + "\t\t│  │");
-		System.out.println("│  │                                      \t│  │");
-		System.out.println("│  │       <[1]선수뽑기> <[2]게임시작> <[3]종료>\t│  │");
+		System.out.println("│  │      	  " + mb.getId() + "님 환영합니다!!" + "\t\t│  │");
+		System.out.println("│  │         " + "현재 뽑을 수 있는 수는 " + mb.getPick() + "개 있습니다! \t│  │");
+		System.out.println("│  │<[1]선수뽑기> <[2]게임시작> <[3]순위확인> <[4]종료>│  │");
+		System.out.println("└──┴────────────────────────────────────────────┴──┘");
+	}
+
+	private void mainLoginPrintNoClean() {
+
+		System.out.println("┌──┬────────────────────────────────────────────┬──┐");
+		System.out.println("│  │           ●○●○ BaseBall Game ○●○●    \t│  │");
+		System.out.println("│  │      	  " + mb.getId() + "님 환영합니다!!" + "\t\t│  │");
+		System.out.println("│  │         " + "현재 뽑을 수 있는 수는 " + mb.getPick() + "개 있습니다! \t│  │");
+		System.out.println("│  │<[1]선수뽑기> <[2]게임시작> <[3]순위확인> <[4]종료>│  │");
 		System.out.println("└──┴────────────────────────────────────────────┴──┘");
 	}
 

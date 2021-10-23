@@ -65,13 +65,14 @@ public class LoginManagement {
 		sql = "insert into g_user(id,pw,score,pick) values (?,?,?,?)";
 
 		int score = 0;
+		int pickDefault = 5;
 
 		try {
 			psmt = conn.prepareStatement(sql);
 			psmt.setString(1, id);
 			psmt.setString(2, pw);
 			psmt.setInt(3, score);
-			psmt.setInt(4, 5);
+			psmt.setInt(4, pickDefault);
 
 			result = psmt.executeUpdate();
 
@@ -100,6 +101,7 @@ public class LoginManagement {
 				mb.setId(rs.getString(1));
 				mb.setPw(rs.getNString(2));
 				mb.setRank(rs.getInt(3));
+				mb.setPick(rs.getInt(4));
 			} else {
 				mb = null;
 			}

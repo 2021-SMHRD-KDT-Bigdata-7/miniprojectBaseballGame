@@ -137,7 +137,7 @@ public class GamePlay {
 						System.out.println("선택한 선수의 능력치" + p_stat);
 					}
 					while (a < 3 || score < 10) {
-						int enemy =0;
+						int enemy = 0;
 						sql = "select a.p_name from allplayer a where not in table myplayer m";
 						psmt = conn.prepareStatement(sql);
 						if (Math.abs(p_stat - enemy) < 10) {
@@ -152,13 +152,13 @@ public class GamePlay {
 							score = +2;
 							a = 0;
 						}
-					  }			
+					}
 				} catch (Exception e) {
 					e.printStackTrace();
 				} finally {
 					dbClose();
 				}
-				
+
 			} else if (a >= 3) {
 				System.out.println("쓰리 스트라이크 선수교체!");
 				System.out.println("당신은 패배자 입니다.한 판 더 하시겠습니까 y/n?");
@@ -184,6 +184,7 @@ public class GamePlay {
 			}
 		}
 	}
+
 	private void getRank(int rank) {
 
 		dbConn();
@@ -200,6 +201,81 @@ public class GamePlay {
 				System.out.println(rs.getInt("rank"));
 				System.out.println();
 			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally {
+			dbClose();
+		}
+	}
+
+	public void playerRegist(String g_id, String p_id) {
+
+		dbConn();
+
+		sql = "select id, pw, score, pick from g_user where id = ?";
+
+		int score = 0;
+
+		try {
+			psmt = conn.prepareStatement(sql);
+			psmt.setString(1, g_id);
+
+			rs = psmt.executeQuery();
+
+			if (rs.next()) {
+				mm.setId(rs.getString(1));
+				mm.setPw(rs.getString(2));
+				mm.setRank(rs.getInt(3));
+				mm.setPick(rs.getInt(4));
+
+			} else {
+				mm = null;
+			}
+
+			sql = "select p_name, p_stat from allplayer where p_id = ?";
+
+			psmt = conn.prepareStatement(sql);
+			psmt.setString(1, p_id);
+
+			rs = psmt.executeQuery();
+
+			if (rs.next()) {
+				ap.setName(rs.getString(1));
+				ap.setStat(rs.getInt(2));
+
+			} else {
+				mm = null;
+			}
+
+			sql = "insert into myplayer (num, id, p_id, p_stat) values(mp_num_seq.nextval, ?, ?, ?)";
+
+			psmt = conn.prepareStatement(sql);
+		
+			psmt.setString(1, g_id);
+			psmt.setString(2, p_id);
+			psmt.setInt(3, ap.getStat());
+
+			result = psmt.executeUpdate();
+
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally {
+			dbClose();
+		}
+	}
+
+	public void playerPickRegist(String id, int count) {
+		dbConn();
+
+		sql = "update  g_user set pick = ? where id = ?";
+
+		try {
+			psmt = conn.prepareStatement(sql);
+			psmt.setInt(1, count);
+			psmt.setString(2, id);
+
+			result = psmt.executeUpdate();
+
 		} catch (Exception e) {
 			e.printStackTrace();
 		} finally {

@@ -102,7 +102,8 @@ public class GamePlay {
 		System.out.println(ap.getStat() + "\t");
 	}
 
-	public void battlePlayer() {
+	//선수번호: playerNum
+	public void battlePlayer(int playerNum) {
 		
 		// a는 스트라이크 개수
 		int a = 0;
@@ -288,6 +289,7 @@ public class GamePlay {
 		}
 	}
 
+	//플레이어 등록 메소드
 	public void playerPickRegist(String id, int count) {
 		dbConn();
 
@@ -305,5 +307,25 @@ public class GamePlay {
 		} finally {
 			dbClose();
 		}
+	}
+	
+	//플레이어의 선수번호들을 출력해주는 int배열 메소드
+	public int[] checkPlayer(String id) {
+		
+		int num = 0;//id에 해당하는 선수들의 수 
+		
+		//db연결
+		
+		//id에 해당하는 선수들의 총 수를 num에 받기.
+				
+		//선수들의 번호들을 int배열에 담기
+		int[] a = new int[num];
+			
+		
+		//db종료
+		
+		//선수들의 번호를 담은 a배열을 출력.
+		return a;
+			
 	}
 }

@@ -109,7 +109,7 @@ public class GamePlay {
 		int a = 0;
 		// vic는 점수
 		int score = 0;
-		int rwin=0;
+		int add=0;
 		while (true) {
 			dbConn();
 			
@@ -182,7 +182,7 @@ public class GamePlay {
 				}
 			} else if (score >= 10) {
 				System.out.println("게임 승리!!");
-				rwin=1;
+				add=1;
 				System.out.println("게임을 이겼습니다.한 판 더 하시겠습니까 y/n?");
 				String c = sc.next();
 				if (c.equals("y") || c.equals("Y")) {
@@ -194,7 +194,7 @@ public class GamePlay {
 				}
 			}
 		}
-		if (rwin>0) {
+		if (add>0) {
 		  try {
 			 String id = "";
 			 sql="update g_user set score=score+1 where id='?'";
@@ -316,6 +316,9 @@ public class GamePlay {
 		
 		//db연결
 		
+		dbConn();
+
+		sql = "select id, p_id, p_stat from myplayer m,g_user g where m id =g id ";
 		//id에 해당하는 선수들의 총 수를 num에 받기.
 				
 		//선수들의 번호들을 int배열에 담기
@@ -323,9 +326,10 @@ public class GamePlay {
 			
 		
 		//db종료
-		
+		dbClose();
 		//선수들의 번호를 담은 a배열을 출력.
 		return a;
+		//
 			
 	}
 }

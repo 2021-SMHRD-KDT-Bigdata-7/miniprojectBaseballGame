@@ -93,10 +93,6 @@ public class GamePlay {
 		return player;
 	}
 
-	public void registerPlayer() {
-		// allplayer
-	}
-
 	public void printPlayer() {
 
 		System.out.println(ap.getName() + "\t");

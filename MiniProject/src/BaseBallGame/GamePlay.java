@@ -100,7 +100,7 @@ public class GamePlay {
 	}
 
 	//선수번호: playerNum
-	public void battlePlayer(int playerNum) {
+	public void battlePlayer() {
 		
 		// a는 스트라이크 개수
 		int a = 0;

@@ -4,9 +4,10 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
-import java.util.Random;
 import java.sql.SQLException;
 import java.util.ArrayList;
+import java.util.List;
+import java.util.Random;
 import java.util.Scanner;
 
 public class GamePlay {
@@ -308,25 +309,42 @@ public class GamePlay {
 	}
 	
 	//플레이어의 선수번호들을 출력해주는 int배열 메소드
-	public int[] checkPlayer(String id) {
-		
+	public List<String> checkPlayer(String id) {
+		List<String> result = new ArrayList<>();
 		int num = 0;//id에 해당하는 선수들의 수 
-		
 		//db연결
 		
 		dbConn();
 
-		sql = "select id, p_id, p_stat from myplayer m,g_user g where m id =g id ";
-		//id에 해당하는 선수들의 총 수를 num에 받기.
-				
-		//선수들의 번호들을 int배열에 담기
-		int[] a = new int[num];
+	
+		try {					
 			
+			sql = "select p_id from myplayer where id = ? ";
+			//id에 해당하는 선수들의 총 수를 num에 받기.
 		
-		//db종료
-		dbClose();
+			
+			psmt = conn.prepareStatement(sql);
+			psmt.setString(1, id);
+		
+			rs = psmt.executeQuery();
+
+			
+			while (rs.next()) {			
+				result.add(rs.getString("p_id"));						
+				
+			}		
+			
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}finally {
+			//db종료
+			dbClose();
+		}		
+				
+	
 		//선수들의 번호를 담은 a배열을 출력.
-		return a;
+		return result;
 		//
 			
 	}

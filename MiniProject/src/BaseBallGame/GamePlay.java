@@ -109,7 +109,7 @@ public class GamePlay {
 		int a = 0;
 		// vic는 점수
 		int score = 0;
-		int add=0;
+		int rwin=0;
 		while (true) {
 			dbConn();
 			
@@ -182,7 +182,7 @@ public class GamePlay {
 				}
 			} else if (score >= 10) {
 				System.out.println("게임 승리!!");
-				add=1;
+				rwin=1;
 				System.out.println("게임을 이겼습니다.한 판 더 하시겠습니까 y/n?");
 				String c = sc.next();
 				if (c.equals("y") || c.equals("Y")) {
@@ -194,7 +194,7 @@ public class GamePlay {
 				}
 			}
 		}
-		if (add>0) {
+		if (rwin>0) {
 		  try {
 			 String id = "";
 			 sql="update g_user set score=score+1 where id='?'";

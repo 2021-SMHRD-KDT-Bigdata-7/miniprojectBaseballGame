@@ -209,29 +209,27 @@ public class GamePlay {
 	   }
 	}
 
-	private void getRank(int rank) {
+	void getRank() {
 
-		dbConn();
-		int a = 0;
+		   dbConn();
+		   
 
-		try {
-			sql = "select id,score from g_user order by score";
-			psmt = conn.prepareStatement(sql);
-			rs = psmt.executeQuery();
-			while (rs.next()) {
-				a++;
-				System.out.print(a + "위");
-				System.out.print(rs.getString("id"));
-				System.out.println(rs.getInt("rank"));
-				System.out.println();
-			}
-		} catch (Exception e) {
-			e.printStackTrace();
-		} finally {
-			dbClose();
+		   try {
+		      sql = "select id, score, RANK() over (order by score desc) as rank from g_user";
+		      psmt = conn.prepareStatement(sql);
+		      rs = psmt.executeQuery();
+		      while (rs.next()) {
+		         System.out.print(rs.getString("id"));
+		         System.out.println(rs.getInt("score"));
+		         System.out.println();
+		      }
+		   } catch (Exception e) {
+		      e.printStackTrace();
+		   } finally {
+		      dbClose();
+		   }
+		   
 		}
-		//어떠하지?
-	}
 
 	public void playerRegist(String g_id, String p_id) {
 

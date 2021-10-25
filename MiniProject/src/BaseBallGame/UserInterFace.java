@@ -251,6 +251,8 @@ public class UserInterFace {
 
 					break;
 				case 3:
+					
+					gp.getRank();
 
 					break;
 				case 4:

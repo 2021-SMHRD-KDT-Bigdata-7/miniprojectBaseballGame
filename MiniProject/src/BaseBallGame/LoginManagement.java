@@ -77,7 +77,7 @@ public class LoginManagement {
 			result = psmt.executeUpdate();
 
 		} catch (Exception e) {
-			e.printStackTrace();
+			
 		} finally {
 			dbClose();
 		}

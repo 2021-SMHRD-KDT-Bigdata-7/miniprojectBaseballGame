@@ -86,9 +86,7 @@ public class GamePlay {
 			}
 		} catch (Exception e) {
 			e.printStackTrace();
-		} finally {
-			dbClose();
-		}
+		} 
 
 		return player;
 	}
@@ -219,7 +217,7 @@ public class GamePlay {
 				psmt.setString(1, p_id);
 				psmt.executeQuery();
 
-				while (rs.next()) {
+				if(rs.next()) {
 					sco = rs.getInt(1);
 				}
 //sss
@@ -314,9 +312,7 @@ public class GamePlay {
 
 		} catch (Exception e) {
 			e.printStackTrace();
-		} finally {
-			dbClose();
-		}
+		} 
 	}
 
 	// 플레이어 등록 메소드
@@ -334,9 +330,7 @@ public class GamePlay {
 
 		} catch (Exception e) {
 			e.printStackTrace();
-		} finally {
-			dbClose();
-		}
+		} 
 	}
 
 	// 플레이어의 선수번호들을 출력해주는 int배열 메소드
@@ -365,10 +359,7 @@ public class GamePlay {
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
-		} finally {
-			// db종료
-			dbClose();
-		}
+		} 
 
 		// 선수들의 번호를 담은 a배열을 출력.
 		return result;
@@ -397,10 +388,7 @@ public class GamePlay {
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
-		} finally {
-			// db종료
-			dbClose();
-		}
+		} 
 		if (name.equals("")) {
 			return false;
 		} else

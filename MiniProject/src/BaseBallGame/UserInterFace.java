@@ -12,7 +12,6 @@ public class UserInterFace {
 	LoginManagement lm;
 	Member mb = new Member();
 
-
 	// 사용자 키보드값
 	int key = 0;
 	List<String> result;
@@ -163,82 +162,77 @@ public class UserInterFace {
 			System.out.print(">> ");
 			key = sc.nextInt();
 
-	
 			int num = mb.getPick();// 뽑을 수 받기.
 			result = gp.checkPlayer(mb.getId());
-			
+
 			switch (key) {
-			
+
 			case 1:
-				if (mb.getPick() >= 1) {				
-				
-				
-						int[] arr = new int[num];
+				if (mb.getPick() >= 1) {
 
-						for (int i = 0; i < num; i++) {
+					int[] arr = new int[num];
 
-							arr[i] = rd.nextInt(30) + 1;
-							for (int j = 0; j < i; j++) {
-								if (arr[i] == arr[j]) {
-									i--;
-								} else {
-									for (int k = 0; k < result.size(); k++) {
-										if (result.get(k).equals(arr[i]+"")) {
-											i--;
-										}
+					for (int i = 0; i < num; i++) {
+
+						arr[i] = rd.nextInt(30) + 1;
+						for (int j = 0; j < i; j++) {
+							if (arr[i] == arr[j]) {
+								i--;
+							} else {
+								for (int k = 0; k < result.size(); k++) {
+									if (result.get(k).equals(arr[i] + "")) {
+										i--;
 									}
 								}
-
 							}
-						}
-
-						// 아래 코드에, ar배열과 새로이 뽑은 선수들도함께 출력
-						
-					
-						for (int i = 0; i < 80; i++)
-							System.out.println("\n");
-
-				
-						for (int i = 1; i <= result.size(); i++) {
-							System.out.print("[" + i + "]" + "\t");
-						}
-						for (int i = result.size()+1; i <= result.size() + num; i++) {
-							System.out.print("[" + i + "]" + "\t");
-						}
-						System.out.println();
-						for (int i = 0; i < result.size(); i++) {
-							AllPlayer player = gp.selectPlayer(Integer.parseInt(result.get(i)+""));
-							System.out.print(player.getName() + "\t");
-						}
-						for (int i = result.size(); i < result.size() + num; i++) {
-							AllPlayer player = gp.selectPlayer(arr[i-result.size()]);
-							System.out.print(player.getName() + "\t");
-						}
-						System.out.println();
-						for (int i = 0; i < result.size(); i++) {
-							AllPlayer player = gp.selectPlayer(Integer.parseInt(result.get(i)));
-							System.out.print(player.getStat() + "\t");
 
 						}
-						for (int i = result.size(); i < result.size() + num; i++) {
-							AllPlayer player = gp.selectPlayer(arr[i-result.size()]);
-							System.out.print(player.getStat() + "\t");
-							gp.playerRegist(mb.getId(), player.getId());
+					}
 
-						}
-						System.out.println();
-						System.out.println("↑ 내 선수들");
+					// 아래 코드에, ar배열과 새로이 뽑은 선수들도함께 출력
 
-						int count = mb.getPick();
-						for (int i = 0; i < num; i++) {
-							--count;
-						}
-						gp.playerPickRegist(mb.getId(), count); // 뽑은 선수들 해당하는 회원에게 저장
-						mb.setPick(count); // 뽑은 횟수만큼 줄어듬.
-						key = 5;
+					for (int i = 0; i < 80; i++)
+						System.out.println("\n");
 
-						break;
+					for (int i = 1; i <= result.size(); i++) {
+						System.out.print("[" + i + "]" + "\t");
+					}
+					for (int i = result.size() + 1; i <= result.size() + num; i++) {
+						System.out.print("[" + i + "]" + "\t");
+					}
+					System.out.println();
+					for (int i = 0; i < result.size(); i++) {
+						AllPlayer player = gp.selectPlayer(Integer.parseInt(result.get(i) + ""));
+						System.out.print(player.getName() + "\t");
+					}
+					for (int i = result.size(); i < result.size() + num; i++) {
+						AllPlayer player = gp.selectPlayer(arr[i - result.size()]);
+						System.out.print(player.getName() + "\t");
+					}
+					System.out.println();
+					for (int i = 0; i < result.size(); i++) {
+						AllPlayer player = gp.selectPlayer(Integer.parseInt(result.get(i)));
+						System.out.print(player.getStat() + "\t");
 
+					}
+					for (int i = result.size(); i < result.size() + num; i++) {
+						AllPlayer player = gp.selectPlayer(arr[i - result.size()]);
+						System.out.print(player.getStat() + "\t");
+						gp.playerRegist(mb.getId(), player.getId());
+
+					}
+					System.out.println();
+					System.out.println("↑ 내 선수들");
+
+					int count = mb.getPick();
+					for (int i = 0; i < num; i++) {
+						--count;
+					}
+					gp.playerPickRegist(mb.getId(), count); // 뽑은 선수들 해당하는 회원에게 저장
+					mb.setPick(count); // 뽑은 횟수만큼 줄어듬.
+					key = 5;
+
+					break;
 
 				} else {
 					System.out.println("뽑을 수 있는 선수가 없습니다.");
@@ -253,23 +247,19 @@ public class UserInterFace {
 				// 내가 가지고있는 선수들 한 번 출력해주기.
 
 				// 내가 가지고있는 선수들 번호를 int배열에 저장
+				if (gp.havePlayer(mb.getId())) {
 
-				System.out.print("출전할 선수를 골라주세요 >> ");
-				int pick = sc.nextInt();
-				mb.setPick(pick); 
+					gp.battlePlayer(mb.getId(), result);
 
-				// int배열의 index는 내가 선택한 번호-1
-				// ex)
-				// [1]추신수 [2]박찬호
-				// 추신수 아이디가 들어있는 배열은, arr[0] = 추신수번호.
-				// 박찬호 아이디가 들어있는 배열은, arr[1] = 박찬호 번호.
-				// 위에 arr[인덱스]는, 내가 선택한 번호-1임. arr[내가선택한 번호 -1]
-				// 이것을 이용하면 될거같습니당
+				} else {
+					System.out.println("출전할 선수가 없습니다");
+					try {
+						Thread.sleep(1000);
+					} catch (InterruptedException e) {
+						e.printStackTrace();
+					}
 
-				// gp.battlePlayer(선수번호) 형태로 써주면 될거같아요.
-
-				// while문 걸어주어서, 해당하는 조건이 되었을 시, while문 빠져나올 수 있도록.
-				// 빠져나오면서, db에 member테이블에 rank 점수 줄 수 있도록.
+				}
 
 				break;
 			case 3:

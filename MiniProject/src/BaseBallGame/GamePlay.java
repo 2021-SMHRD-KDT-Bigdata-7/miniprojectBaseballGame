@@ -225,11 +225,11 @@ public class GamePlay {
 						System.out.println("상대 선수의 능력치는 " + enemy + "입니다.");
 						System.out.println();
 						try {
-							Thread.sleep(1000);
+							Thread.sleep(500);
 						} catch (InterruptedException e) {
 							e.printStackTrace();
 						}
-						if (Math.abs(p_stat - enemy) < 20) {
+						if (Math.abs(p_stat - enemy) < 30) {
 							System.out.println("놓쳤습니다.");
 							try {
 								Thread.sleep(500);
@@ -245,11 +245,11 @@ public class GamePlay {
 							}
 							System.out.println("스트라이크" + "  " + a + "!");
 							try {
-								Thread.sleep(1000);
+								Thread.sleep(500);
 							} catch (InterruptedException e) {
 								e.printStackTrace();
 							}
-						} else if (Math.abs(p_stat - enemy) < 40) {
+						} else if (Math.abs(p_stat - enemy) < 60) {
 							System.out.print("쳤습니다.   ");
 							try {
 								Thread.sleep(500);
@@ -268,7 +268,7 @@ public class GamePlay {
 							System.out.println();
 							System.out.println();
 							try {
-								Thread.sleep(1000);
+								Thread.sleep(500);
 							} catch (InterruptedException e) {
 								e.printStackTrace();
 							}
@@ -291,7 +291,7 @@ public class GamePlay {
 							System.out.println();
 							System.out.println();
 							try {
-								Thread.sleep(1000);
+								Thread.sleep(500);
 							} catch (InterruptedException e) {
 								e.printStackTrace();
 							}
@@ -301,13 +301,13 @@ public class GamePlay {
 				} else if (a >= 3) {
 					System.out.println("쓰리 스트라이크 선수교체!");
 					try {
-						Thread.sleep(1000);
+						Thread.sleep(500);
 					} catch (InterruptedException e) {
 						e.printStackTrace();
 					}
 					System.out.println("당신은 패배했습니다.한 판 더 하시겠습니까 y/n?");
 					try {
-						Thread.sleep(1000);
+						Thread.sleep(500);
 					} catch (InterruptedException e) {
 						e.printStackTrace();
 					}
@@ -354,7 +354,7 @@ public class GamePlay {
 							psmt.executeUpdate();
 						}
 						try {
-							Thread.sleep(1000);
+							Thread.sleep(500);
 						} catch (InterruptedException e) {
 							e.printStackTrace();
 						}

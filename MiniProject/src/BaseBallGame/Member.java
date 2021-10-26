@@ -2,7 +2,7 @@ package BaseBallGame;
 
 public class Member {
 
-	private String id;
+	public static String id;
 	private String pw;
 	private int rank;
 	private int pick;

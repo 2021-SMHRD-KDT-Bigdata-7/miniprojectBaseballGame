@@ -4,10 +4,10 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.util.Random;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Random;
 import java.util.Scanner;
 
 public class GamePlay {
@@ -91,6 +91,10 @@ public class GamePlay {
 		return player;
 	}
 
+	public void registerPlayer() {
+		// allplayer
+	}
+
 	public void printPlayer() {
 
 		System.out.println(ap.getName() + "\t");
@@ -99,22 +103,19 @@ public class GamePlay {
 
 	// 선수번호: playerNum
 	public void battlePlayer(String p_id, List<String> result) {
-
+		// id에 넘버를 부여후 id 넘버 + 5*의 방식으로 해결 ex) 3(입력키) + id넘버*5
 		// a는 스트라이크 개수
 		int a = 0;
 		// vic는 점수
 		int score = 0;
 		int add = 0;
-		try {
-			while (true) {
-				dbConn();
 
-				System.out.println("게임을 시작합니다.");
+		while (true) {
+			dbConn();
+			String id = Member.id;
+			try {
 				if ((score < 10) && (a < 3)) {
-
-//					int m_num = 1;
-//					String p_name = null;
-					while ((a < 3) && (score < 10)) {
+					while (a < 3 && score < 10) {
 						int p_stat = 0;
 
 						for (int i = 1; i <= result.size(); i++) {
@@ -156,38 +157,168 @@ public class GamePlay {
 						AllPlayer player = selectPlayer(Integer.parseInt(result.get(ch - 1)));
 						p_stat = player.getStat();
 
+
+						/*
+						 * /////////////////////////////////////////////////////////////////////////////
+						 * /////////////////////// sql =
+						 * "select m.p_stat, a.p_name, m.num from myplayer m, allplayer a where m.p_id = a.p_id and m.id=?"
+						 * ; psmt = conn.prepareStatement(sql); psmt.setString(1, id); rs =
+						 * psmt.executeQuery(); int i = 1; while (rs.next()) { System.out.print("[" +
+						 * rs.getInt(3) + "]"); System.out.print(rs.getString(2) + " ");
+						 * System.out.println(rs.getInt(1) + "\t"); System.out.println(); i++; // 왔습니다!
+						 * 저기 i를 1로 입력하고 while 문을 걸었는데 1이 안바껴요아 } System.out.print("출전할 선수를 선택하십시오.  ");
+						 * int ch = sc.nextInt(); System.out.println(); sql =
+						 * "select g.id, m.p_id, m.p_stat from myplayer m,g_user g where m id =g id ";
+						 * // id에 해당하는 선수들의 총 수를 num에 받기.
+						 * 
+						 * // 선수들의 번호들을 int배열
+						 * 
+						 * 
+						 * sql =
+						 * "select a.p_name, m.num, a.p_stat from allplayer a,myplayer m where a.p_id=m.p_id"
+						 * ; psmt = conn.prepareStatement(sql); rs = psmt.executeQuery();
+						 * 
+						 * int m_num = 0; String p_name = null; int p_stat = 0;
+						 * 
+						 * 
+						 * while (rs.next()) { p_name = rs.getString(1); m_num = rs.getInt(2); p_stat =
+						 * rs.getInt(3); System.out.println("[" + m_num + "]" + " 번 " + p_name + " 능력치:"
+						 * + p_stat); }
+						 * 
+						 * 
+						 sql =
+						 "select a.p_name, m.num, m.p_stat from allplayer a,myplayer m where a.p_id=m.p_id and m.num=?"
+						 ; psmt = conn.prepareStatement(sql); psmt.setInt(1, ch); // psmt.setString(1,
+						 id); rs = psmt.executeQuery();
+						 * 
+						 while (rs.next()) { m_num = rs.getInt(2); p_name = rs.getString(1); p_stat =
+						 rs.getInt(3); System.out.println(m_num + "번 투수 " + p_name + " 등판");
+						 System.out.println(); try { Thread.sleep(1000); } catch (InterruptedException
+						 e) { e.printStackTrace(); } System.out.println("선택한 선수의 능력치" + p_stat);
+						 System.out.println(); try { Thread.sleep(1000); } catch (InterruptedException
+						 e) { e.printStackTrace(); } }
+						 */
+
+						////////////////////////////////////////////////////////////////////////////////////////////
+						/*
+						 * int m_num = 0; String p_name = null; sql
+						 * ="select a.p_name, m.num, m.p_stat from allplayer a,myplayer m where a.p_id=m.p_id and m.num=?"
+						 * ; psmt = conn.prepareStatement(sql); psmt.setInt(1, ch);
+						 * psmt.setString(1,id); rs = psmt.executeQuery(); while (rs.next()) { m_num =
+						 * rs.getInt(2); p_name = rs.getString(1); p_stat =rs.getInt(3);
+						 * System.out.println(m_num + "번 투수 " + p_name + " 등판"); System.out.println();
+						 * try { Thread.sleep(1000); } catch (InterruptedException e) {
+						 * e.printStackTrace(); } System.out.println("선택한 선수의 능력치" + p_stat);
+						 * System.out.println(); try { Thread.sleep(1000); } catch (InterruptedException
+						 * e) { e.printStackTrace(); } }
+						 */
 						int enemy = 0;
-//						sql = "select a.p_name from allplayer a where not in table myplayer m";
-//						psmt = conn.prepareStatement(sql);
-//확인 끝났습니다. 제가 따로 깃허브 하나 새로 파고 따로 푸쉬한 다음에 병합해볼게요.//
+						sql = "select a.p_name from allplayer a where not in table myplayer m";
 						Random rd = new Random();
 						enemy = rd.nextInt(100) + 1;
+						System.out.println("내 선수의 능력치는 "+p_stat+"입니다.");
 						System.out.println();
+						try {
+							Thread.sleep(300);
+						} catch (InterruptedException e) {
+							e.printStackTrace();
+						}
 						System.out.println("상대 선수의 능력치는 " + enemy + "입니다.");
-						if (Math.abs(p_stat - enemy) < 10) {
+						System.out.println();
+						try {
+							Thread.sleep(1000);
+						} catch (InterruptedException e) {
+							e.printStackTrace();
+						}
+						if (Math.abs(p_stat - enemy) < 20) {
+							System.out.println("놓쳤습니다.");
+							try {
+								Thread.sleep(500);
+							} catch (InterruptedException e) {
+								e.printStackTrace();
+							}
 							System.out.println("스트라이크");
-							a++;
-							System.out.println("스트라이크 갯수: " + a);
-							System.out.println("점수: " + score);
-						} else if (Math.abs(p_stat - enemy) < 30) {
+							a = a + 1;
+							try {
+								Thread.sleep(500);
+							} catch (InterruptedException e) {
+								e.printStackTrace();
+							}
+							System.out.println("스트라이크" + "  " + a + "!");
+							try {
+								Thread.sleep(1000);
+							} catch (InterruptedException e) {
+								e.printStackTrace();
+							}
+						} else if (Math.abs(p_stat - enemy) < 40) {
+							System.out.print("쳤습니다.   ");
+							try {
+								Thread.sleep(500);
+							} catch (InterruptedException e) {
+								e.printStackTrace();
+							}
 							System.out.println("안타");
 							score = score + 1;
-
-							System.out.println("스트라이크 갯수: " + a);
-							System.out.println("점수: " + score);
+							a = 0;
+							try {
+								Thread.sleep(500);
+							} catch (InterruptedException e) {
+								e.printStackTrace();
+							}
+							System.out.println(score + "점 획득!");
+							System.out.println();
+							System.out.println();
+							try {
+								Thread.sleep(1000);
+							} catch (InterruptedException e) {
+								e.printStackTrace();
+							}
 						} else {
+							System.out.print("쳤습니다. 쭉쭉 뻗어나갑니다.    ");
+							try {
+								Thread.sleep(500);
+							} catch (InterruptedException e) {
+								e.printStackTrace();
+							}
 							System.out.println("홈런");
+							try {
+								Thread.sleep(500);
+							} catch (InterruptedException e) {
+								e.printStackTrace();
+							}
 							score = score + 2;
-
-							System.out.println("스트라이크 갯수: " + a);
-							System.out.println("점수: " + score);
+							a = 0;
+							System.out.println(score + "점 획득!");
+							System.out.println();
+							System.out.println();
+							try {
+								Thread.sleep(1000);
+							} catch (InterruptedException e) {
+								e.printStackTrace();
+							}
 						}
 					}
-
+//
 				} else if (a >= 3) {
 					System.out.println("쓰리 스트라이크 선수교체!");
+					try {
+						Thread.sleep(1000);
+					} catch (InterruptedException e) {
+						e.printStackTrace();
+					}
 					System.out.println("당신은 패배했습니다.한 판 더 하시겠습니까 y/n?");
+					try {
+						Thread.sleep(1000);
+					} catch (InterruptedException e) {
+						e.printStackTrace();
+					}
 					String c = sc.next();
+					if (add > 0) {
+						sql = "update g_user set score=score+1 where id=?";
+						psmt = conn.prepareStatement(sql);
+						psmt.setString(1, id);
+						psmt.executeUpdate();
+					}
 					if (c.equals("y") || c.equals("Y")) {
 						a = 0;
 						score = 0;
@@ -195,9 +326,40 @@ public class GamePlay {
 						System.out.println("게임을 종료합니다.");
 						break;
 					}
+
 				} else if (score >= 10) {
+					System.out.println();
 					System.out.println("게임 승리!!");
 					add = 1;
+					if (add > 0) {
+
+						sql = "update g_user set score=score+1 where id=?";
+						psmt = conn.prepareStatement(sql);
+						psmt.setString(1, id);
+						psmt.executeUpdate();
+
+						sql = "select score from g_user where id=?";
+						psmt = conn.prepareStatement(sql);
+						psmt.setString(1, id);
+						rs = psmt.executeQuery();
+						rs.next();
+
+						int count = rs.getInt(1);
+
+						if (count != 0 && count % 2 == 0) {
+
+							sql = "update  g_user set pick = ? where id = ?";
+							psmt = conn.prepareStatement(sql);
+							psmt.setInt(1, 1);
+							psmt.setString(2, id);
+							psmt.executeUpdate();
+						}
+						try {
+							Thread.sleep(1000);
+						} catch (InterruptedException e) {
+							e.printStackTrace();
+						}
+					}
 					System.out.println("게임을 이겼습니다.한 판 더 하시겠습니까 y/n?");
 					String c = sc.next();
 					if (c.equals("y") || c.equals("Y")) {
@@ -208,7 +370,13 @@ public class GamePlay {
 						break;
 					}
 				}
+
+			} catch (Exception e) {
+				e.printStackTrace();
+			} finally {
+				dbClose();
 			}
+<<<<<<< HEAD
 			if (add > 0) {
 
 				int sco = 0;
@@ -237,10 +405,13 @@ public class GamePlay {
 			e.printStackTrace();
 		} finally {
 			dbClose();
+=======
+>>>>>>> branch 'master' of https://github.com/2021-SMHRD-KDT-Bigdata-7/miniprojectBaseballGame.git
 		}
 	}
 
 	void getRank() {
+		int i = 0;
 
 		dbConn();
 
@@ -249,9 +420,15 @@ public class GamePlay {
 			psmt = conn.prepareStatement(sql);
 			rs = psmt.executeQuery();
 			while (rs.next()) {
-				System.out.print(rs.getString("id"));
-				System.out.println(rs.getInt("score"));
-				System.out.println();
+				i++;
+				System.out.print(i + "위  ");
+				System.out.print(rs.getString("id") + "\t");
+				System.out.println(rs.getInt("score") + "점");
+				try {
+					Thread.sleep(500);
+				} catch (InterruptedException e) {
+					e.printStackTrace();
+				}
 			}
 		} catch (Exception e) {
 			e.printStackTrace();
@@ -318,10 +495,9 @@ public class GamePlay {
 	// 플레이어 등록 메소드
 	public void playerPickRegist(String id, int count) {
 		dbConn();
-
-		sql = "update  g_user set pick = ? where id = ?";
-
 		try {
+			sql = "update  g_user set pick = ? where id = ?";
+
 			psmt = conn.prepareStatement(sql);
 			psmt.setInt(1, count);
 			psmt.setString(2, id);
@@ -367,7 +543,6 @@ public class GamePlay {
 
 	}
 
-	// 회원이 선수를 보유하고있는가
 	public boolean havePlayer(String id) {
 
 		dbConn();

@@ -86,7 +86,7 @@ public class GamePlay {
 			}
 		} catch (Exception e) {
 			e.printStackTrace();
-		} 
+		}
 
 		return player;
 	}
@@ -157,7 +157,6 @@ public class GamePlay {
 						AllPlayer player = selectPlayer(Integer.parseInt(result.get(ch - 1)));
 						p_stat = player.getStat();
 
-
 						/*
 						 * /////////////////////////////////////////////////////////////////////////////
 						 * /////////////////////// sql =
@@ -186,17 +185,17 @@ public class GamePlay {
 						 * + p_stat); }
 						 * 
 						 * 
-						 sql =
-						 "select a.p_name, m.num, m.p_stat from allplayer a,myplayer m where a.p_id=m.p_id and m.num=?"
-						 ; psmt = conn.prepareStatement(sql); psmt.setInt(1, ch); // psmt.setString(1,
-						 id); rs = psmt.executeQuery();
+						 * sql =
+						 * "select a.p_name, m.num, m.p_stat from allplayer a,myplayer m where a.p_id=m.p_id and m.num=?"
+						 * ; psmt = conn.prepareStatement(sql); psmt.setInt(1, ch); // psmt.setString(1,
+						 * id); rs = psmt.executeQuery();
 						 * 
-						 while (rs.next()) { m_num = rs.getInt(2); p_name = rs.getString(1); p_stat =
-						 rs.getInt(3); System.out.println(m_num + "번 투수 " + p_name + " 등판");
-						 System.out.println(); try { Thread.sleep(1000); } catch (InterruptedException
-						 e) { e.printStackTrace(); } System.out.println("선택한 선수의 능력치" + p_stat);
-						 System.out.println(); try { Thread.sleep(1000); } catch (InterruptedException
-						 e) { e.printStackTrace(); } }
+						 * while (rs.next()) { m_num = rs.getInt(2); p_name = rs.getString(1); p_stat =
+						 * rs.getInt(3); System.out.println(m_num + "번 투수 " + p_name + " 등판");
+						 * System.out.println(); try { Thread.sleep(1000); } catch (InterruptedException
+						 * e) { e.printStackTrace(); } System.out.println("선택한 선수의 능력치" + p_stat);
+						 * System.out.println(); try { Thread.sleep(1000); } catch (InterruptedException
+						 * e) { e.printStackTrace(); } }
 						 */
 
 						////////////////////////////////////////////////////////////////////////////////////////////
@@ -216,7 +215,7 @@ public class GamePlay {
 						sql = "select a.p_name from allplayer a where not in table myplayer m";
 						Random rd = new Random();
 						enemy = rd.nextInt(100) + 1;
-						System.out.println("내 선수의 능력치는 "+p_stat+"입니다.");
+						System.out.println("내 선수의 능력치는 " + p_stat + "입니다.");
 						System.out.println();
 						try {
 							Thread.sleep(300);
@@ -373,41 +372,35 @@ public class GamePlay {
 
 			} catch (Exception e) {
 				e.printStackTrace();
-			} finally {
-				dbClose();
 			}
-<<<<<<< HEAD
-			if (add > 0) {
+			try {
 
-				int sco = 0;
-				sql = "select score from g_user where id = ?";
-				psmt = conn.prepareStatement(sql);
-				psmt.setString(1, p_id);
-				psmt.executeQuery();
+				if (add > 0) {
 
-				if(rs.next()) {
-					sco = rs.getInt(1);
+					int sco = 0;
+					sql = "select score from g_user where id = ?";
+					psmt = conn.prepareStatement(sql);
+					psmt.setString(1, p_id);
+					psmt.executeQuery();
+
+					if (rs.next()) {
+						sco = rs.getInt(1);
+					}
+
+					sql = "update g_user set score = ? where id=?";
+					psmt = conn.prepareStatement(sql);
+					System.out.println(sco);
+					sco = sco + 1;
+					psmt.setInt(1, sco);
+					psmt.setString(2, p_id);
+					psmt.executeUpdate();
+
 				}
-//sss
-				//잠시만요 뭐 하나만 확인해봐도 될까요? -나민주
-				//넹넹 그 민주씨꺼랑 합쳐도됩니당 필요한거있으면 역
-
-				sql = "update g_user set score = ? where id=?";
-				psmt = conn.prepareStatement(sql);
-				System.out.println(sco);
-				sco = sco + 1;
-				psmt.setInt(1, sco);
-				psmt.setString(2, p_id);
-				psmt.executeUpdate();
-
+			} catch (Exception e) {
+				e.printStackTrace();
 			}
-		} catch (Exception e) {
-			e.printStackTrace();
-		} finally {
-			dbClose();
-=======
->>>>>>> branch 'master' of https://github.com/2021-SMHRD-KDT-Bigdata-7/miniprojectBaseballGame.git
 		}
+
 	}
 
 	void getRank() {
@@ -489,7 +482,7 @@ public class GamePlay {
 
 		} catch (Exception e) {
 			e.printStackTrace();
-		} 
+		}
 	}
 
 	// 플레이어 등록 메소드
@@ -506,7 +499,7 @@ public class GamePlay {
 
 		} catch (Exception e) {
 			e.printStackTrace();
-		} 
+		}
 	}
 
 	// 플레이어의 선수번호들을 출력해주는 int배열 메소드
@@ -535,7 +528,7 @@ public class GamePlay {
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
-		} 
+		}
 
 		// 선수들의 번호를 담은 a배열을 출력.
 		return result;
@@ -563,7 +556,7 @@ public class GamePlay {
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
-		} 
+		}
 		if (name.equals("")) {
 			return false;
 		} else

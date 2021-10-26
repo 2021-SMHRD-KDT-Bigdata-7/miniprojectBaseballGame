@@ -11,7 +11,7 @@ public class Main {
 
 		   AudioInputStream ais;
 		try {
-			ais = AudioSystem.getAudioInputStream(new File("file(bgm)/music shaker (prod Letea).mp3"));
+			ais = AudioSystem.getAudioInputStream(new File("file(bgm)/music shaker.wav"));
 			 Clip clip;
 				clip = AudioSystem.getClip();
 			

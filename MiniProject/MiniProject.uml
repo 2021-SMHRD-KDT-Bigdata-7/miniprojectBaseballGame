@@ -1,0 +1,1614 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:UMLLabProfile="http:///schemas/UMLLabProfile/NS/0" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xsi:schemaLocation="http:///schemas/UMLLabProfile/NS/0 pathmap://UMLLAB_PROFILES/UMLLab.profile.uml#UMLLabProfile-Annotation_2-UMLLabProfile">
+  <uml:Model xmi:id="_4B3bQDYcEeyQU9d2fjnV0g" name="MiniProject">
+    <eAnnotations xmi:id="_4CUuQDYcEeyQU9d2fjnV0g" source="http://ns.yatta.de/umllab">
+      <contents xmi:type="ecore:EAnnotation" xmi:id="_4CUuQTYcEeyQU9d2fjnV0g" source="codegen">
+        <details xmi:id="_4CUuQjYcEeyQU9d2fjnV0g" key="codegenDirectory" value="/MiniProject/src"/>
+        <details xmi:id="_4o17sDYcEeyQU9d2fjnV0g" key="AssociatedSourceCode" value="/MiniProject/src/BaseBallGame/AllPlayer.java;3723228611/1;/MiniProject/src/BaseBallGame/GamePlay.java;3968470193/1;/MiniProject/src/BaseBallGame/LoginManagement.java;1912893370/1;/MiniProject/src/BaseBallGame/Main.java;2835388341/1;/MiniProject/src/BaseBallGame/Member.java;320897561/1;/MiniProject/src/BaseBallGame/UserInterFace.java;3773076764/1;"/>
+      </contents>
+    </eAnnotations>
+    <elementImport xmi:id="_4VCO4DYcEeyQU9d2fjnV0g">
+      <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+    </elementImport>
+    <elementImport xmi:id="_4VCO4TYcEeyQU9d2fjnV0g">
+      <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#byte"/>
+    </elementImport>
+    <elementImport xmi:id="_4VCO4jYcEeyQU9d2fjnV0g">
+      <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#char"/>
+    </elementImport>
+    <elementImport xmi:id="_4VCO4zYcEeyQU9d2fjnV0g">
+      <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#double"/>
+    </elementImport>
+    <elementImport xmi:id="_4VC18DYcEeyQU9d2fjnV0g">
+      <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#float"/>
+    </elementImport>
+    <elementImport xmi:id="_4VC18TYcEeyQU9d2fjnV0g">
+      <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+    </elementImport>
+    <elementImport xmi:id="_4VC18jYcEeyQU9d2fjnV0g">
+      <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#long"/>
+    </elementImport>
+    <elementImport xmi:id="_4VC18zYcEeyQU9d2fjnV0g">
+      <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#short"/>
+    </elementImport>
+    <elementImport xmi:id="_4VC19DYcEeyQU9d2fjnV0g">
+      <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+    </elementImport>
+    <packagedElement xmi:type="uml:Package" xmi:id="_4VIVgDYcEeyQU9d2fjnV0g" name="BaseBallGame">
+      <packagedElement xmi:type="uml:Class" xmi:id="_4Vor0DYcEeyQU9d2fjnV0g" name="AllPlayer">
+        <ownedAttribute xmi:id="_4YDGoDYcEeyQU9d2fjnV0g" name="id">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_4YDtsDYcEeyQU9d2fjnV0g" name="name">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_4YDtsTYcEeyQU9d2fjnV0g" name="stat">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+        </ownedAttribute>
+        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_4YfLgDYcEeyQU9d2fjnV0g" name="AllPlayer" specification="_4Vzq8DYcEeyQU9d2fjnV0g">
+          <ownedParameter xmi:id="_4YfLgTYcEeyQU9d2fjnV0g" name="id">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </ownedParameter>
+          <ownedParameter xmi:id="_4YfLgjYcEeyQU9d2fjnV0g" name="name">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </ownedParameter>
+          <ownedParameter xmi:id="_4YfykDYcEeyQU9d2fjnV0g" name="stat">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+          </ownedParameter>
+          <ownedParameter xmi:id="_4YfykTYcEeyQU9d2fjnV0g" type="_4Vor0DYcEeyQU9d2fjnV0g" direction="return"/>
+          <language>java</language>
+          <body>super();&#xD;
+		this.id = id;&#xD;
+		this.name = name;&#xD;
+		this.stat = stat;&#xD;
+	</body>
+        </ownedBehavior>
+        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_4YlSIDYcEeyQU9d2fjnV0g" name="toString" specification="_4V1gIDYcEeyQU9d2fjnV0g">
+          <ownedParameter xmi:id="_4YlSITYcEeyQU9d2fjnV0g" direction="return">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </ownedParameter>
+          <language>java</language>
+          <body>return &quot;Allplayer [id=&quot; + id + &quot;, name=&quot; + name + &quot;, stat=&quot; + stat + &quot;]&quot;;&#xD;
+	</body>
+        </ownedBehavior>
+        <ownedOperation xmi:id="_4VvZgDYcEeyQU9d2fjnV0g" name="AllPlayer">
+          <eAnnotations xmi:id="_4VwAkDYcEeyQU9d2fjnV0g" source="http://www.eclipse.org/uml2/2.0.0/UML">
+            <details xmi:id="_4VwAkTYcEeyQU9d2fjnV0g" key="create"/>
+          </eAnnotations>
+          <ownedParameter xmi:id="_4Vyc0DYcEeyQU9d2fjnV0g" type="_4Vor0DYcEeyQU9d2fjnV0g" direction="return"/>
+        </ownedOperation>
+        <ownedOperation xmi:id="_4Vzq8DYcEeyQU9d2fjnV0g" name="AllPlayer" method="_4YfLgDYcEeyQU9d2fjnV0g">
+          <eAnnotations xmi:id="_4V05EDYcEeyQU9d2fjnV0g" source="http://www.eclipse.org/uml2/2.0.0/UML">
+            <details xmi:id="_4V05ETYcEeyQU9d2fjnV0g" key="create"/>
+          </eAnnotations>
+          <ownedParameter xmi:id="_4V0SADYcEeyQU9d2fjnV0g" name="id">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </ownedParameter>
+          <ownedParameter xmi:id="_4V0SATYcEeyQU9d2fjnV0g" name="name">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </ownedParameter>
+          <ownedParameter xmi:id="_4V0SAjYcEeyQU9d2fjnV0g" name="stat">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+          </ownedParameter>
+          <ownedParameter xmi:id="_4V05EjYcEeyQU9d2fjnV0g" type="_4Vor0DYcEeyQU9d2fjnV0g" direction="return"/>
+        </ownedOperation>
+        <ownedOperation xmi:id="_4V1gIDYcEeyQU9d2fjnV0g" name="toString" method="_4YlSIDYcEeyQU9d2fjnV0g">
+          <ownedParameter xmi:id="_4V1gITYcEeyQU9d2fjnV0g" direction="return">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </ownedParameter>
+        </ownedOperation>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_4V5xkDYcEeyQU9d2fjnV0g" name="GamePlay">
+        <ownedAttribute xmi:id="_4YEUwDYcEeyQU9d2fjnV0g" name="conn" visibility="package" type="_4XaNcDYcEeyQU9d2fjnV0g" association="_4Yz7oDYcEeyQU9d2fjnV0g">
+          <defaultValue xmi:type="uml:LiteralString" xmi:id="_4YEUwTYcEeyQU9d2fjnV0g" value="null"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_4YE70TYcEeyQU9d2fjnV0g" name="psmt" visibility="package" type="_4XcpsTYcEeyQU9d2fjnV0g" association="_4Y2-8DYcEeyQU9d2fjnV0g">
+          <defaultValue xmi:type="uml:LiteralString" xmi:id="_4YE70jYcEeyQU9d2fjnV0g" value="null"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_4YFi4TYcEeyQU9d2fjnV0g" name="rs" visibility="package" type="_4Xd30DYcEeyQU9d2fjnV0g" association="_4Y3mATYcEeyQU9d2fjnV0g">
+          <defaultValue xmi:type="uml:LiteralString" xmi:id="_4YFi4jYcEeyQU9d2fjnV0g" value="null"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_4YGJ8TYcEeyQU9d2fjnV0g" name="sc" visibility="package" type="_4XjXYTYcEeyQU9d2fjnV0g" association="_4Y4NETYcEeyQU9d2fjnV0g">
+          <defaultValue xmi:type="uml:LiteralString" xmi:id="_4YGJ8jYcEeyQU9d2fjnV0g" value="new Scanner(System.in)"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_4YGxATYcEeyQU9d2fjnV0g" name="rd" visibility="package" type="_4Xee4TYcEeyQU9d2fjnV0g" association="_4Y40ITYcEeyQU9d2fjnV0g">
+          <defaultValue xmi:type="uml:LiteralString" xmi:id="_4YGxAjYcEeyQU9d2fjnV0g" value="new Random()"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_4YHYEDYcEeyQU9d2fjnV0g" name="lm" visibility="package" type="_4WH0ADYcEeyQU9d2fjnV0g" association="_4Y6CQTYcEeyQU9d2fjnV0g">
+          <defaultValue xmi:type="uml:LiteralString" xmi:id="_4YHYETYcEeyQU9d2fjnV0g" value="new LoginManagement()"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_4YHYEzYcEeyQU9d2fjnV0g" name="mm" visibility="package" type="_4WQ98TYcEeyQU9d2fjnV0g" association="_4Y6pUTYcEeyQU9d2fjnV0g">
+          <defaultValue xmi:type="uml:LiteralString" xmi:id="_4YHYFDYcEeyQU9d2fjnV0g" value="new Member()"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_4YH_ITYcEeyQU9d2fjnV0g" name="ap" visibility="package" type="_4Vor0DYcEeyQU9d2fjnV0g" association="_4Y7QYTYcEeyQU9d2fjnV0g">
+          <defaultValue xmi:type="uml:LiteralString" xmi:id="_4YH_IjYcEeyQU9d2fjnV0g" value="new AllPlayer()"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_4YImMTYcEeyQU9d2fjnV0g" name="result" visibility="package">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+          <defaultValue xmi:type="uml:LiteralString" xmi:id="_4YImMjYcEeyQU9d2fjnV0g" value="0"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_4YJNQDYcEeyQU9d2fjnV0g" name="sql" visibility="package">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedAttribute>
+        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_4Yl5MDYcEeyQU9d2fjnV0g" name="dbConn" specification="_4V8N0DYcEeyQU9d2fjnV0g">
+          <language>java</language>
+          <body>try {&#xD;
+			Class.forName(&quot;oracle.jdbc.driver.OracleDriver&quot;);&#xD;
+&#xD;
+			// 2.DB연결&#xD;
+			String url = &quot;jdbc:oracle:thin:@project-db-stu.ddns.net:1524:xe&quot;;&#xD;
+			String user = &quot;cgi_2_2_1022&quot;;&#xD;
+			String password = &quot;smhrd2&quot;;&#xD;
+			conn = DriverManager.getConnection(url, user, password);&#xD;
+&#xD;
+		} catch (Exception e) {&#xD;
+			// Exception&#xD;
+			System.out.println(&quot;오류확인&quot;);&#xD;
+			e.printStackTrace();&#xD;
+		}&#xD;
+	</body>
+        </ownedBehavior>
+        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_4Yl5MTYcEeyQU9d2fjnV0g" name="dbClose" specification="_4V804DYcEeyQU9d2fjnV0g">
+          <language>java</language>
+          <body>try {&#xD;
+			if (rs != null) {&#xD;
+				rs.close();&#xD;
+			}&#xD;
+			if (psmt != null) {&#xD;
+				psmt.close();&#xD;
+			}&#xD;
+			if (conn != null) {&#xD;
+				conn.close();&#xD;
+			}&#xD;
+		} catch (Exception e) {&#xD;
+			e.printStackTrace();&#xD;
+			System.out.println(&quot;게임을 종료하겠습니다.&quot;);&#xD;
+		}&#xD;
+	</body>
+        </ownedBehavior>
+        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_4Yl5MjYcEeyQU9d2fjnV0g" name="selectPlayer" specification="_4V9b8DYcEeyQU9d2fjnV0g">
+          <ownedParameter xmi:id="_4Yl5MzYcEeyQU9d2fjnV0g" name="p_id">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+          </ownedParameter>
+          <ownedParameter xmi:id="_4Yl5NDYcEeyQU9d2fjnV0g" type="_4Vor0DYcEeyQU9d2fjnV0g" direction="return"/>
+          <language>java</language>
+          <body>// allplayer&#xD;
+		AllPlayer player = null;&#xD;
+&#xD;
+		dbConn();&#xD;
+&#xD;
+		sql = &quot;select * from allplayer where p_id = ?&quot;;&#xD;
+&#xD;
+		try {&#xD;
+			psmt = conn.prepareStatement(sql);&#xD;
+			psmt.setInt(1, p_id);&#xD;
+&#xD;
+			rs = psmt.executeQuery();&#xD;
+&#xD;
+			if (rs.next()) {&#xD;
+				String id = rs.getString(1);&#xD;
+				String name = rs.getString(2);&#xD;
+				int stat = rs.getInt(3);&#xD;
+&#xD;
+				player = new AllPlayer(id, name, stat);&#xD;
+			}&#xD;
+		} catch (Exception e) {&#xD;
+			e.printStackTrace();&#xD;
+		}&#xD;
+&#xD;
+		return player;&#xD;
+	</body>
+        </ownedBehavior>
+        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_4YmgQDYcEeyQU9d2fjnV0g" name="registerPlayer" specification="_4V-DADYcEeyQU9d2fjnV0g">
+          <language>java</language>
+          <body>// allplayer&#xD;
+	</body>
+        </ownedBehavior>
+        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_4YmgQTYcEeyQU9d2fjnV0g" name="printPlayer" specification="_4V-DATYcEeyQU9d2fjnV0g">
+          <language>java</language>
+          <body>System.out.println(ap.getName() + &quot;\t&quot;);&#xD;
+		System.out.println(ap.getStat() + &quot;\t&quot;);&#xD;
+	</body>
+        </ownedBehavior>
+        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_4YmgQjYcEeyQU9d2fjnV0g" name="battlePlayer" specification="_4X58sDYcEeyQU9d2fjnV0g">
+          <ownedParameter xmi:id="_4YmgQzYcEeyQU9d2fjnV0g" name="p_id">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </ownedParameter>
+          <ownedParameter xmi:id="_4YmgRDYcEeyQU9d2fjnV0g" name="result" type="_4XiwUDYcEeyQU9d2fjnV0g"/>
+          <language>java</language>
+          <body>// id에 넘버를 부여후 id 넘버 + 5*의 방식으로 해결 ex) 3(입력키) + id넘버*5&#xD;
+		// a는 스트라이크 개수&#xD;
+		int a = 0;&#xD;
+		// vic는 점수&#xD;
+		int score = 0;&#xD;
+		int add = 0;&#xD;
+&#xD;
+		while (true) {&#xD;
+			dbConn();&#xD;
+			String id = Member.id;&#xD;
+			try {&#xD;
+				if ((score &lt; 10) &amp;&amp; (a &lt; 3)) {&#xD;
+					while (a &lt; 3 &amp;&amp; score &lt; 10) {&#xD;
+						int p_stat = 0;&#xD;
+&#xD;
+						for (int i = 1; i &lt;= result.size(); i++) {&#xD;
+							System.out.print(&quot;[&quot; + i + &quot;]&quot; + &quot;\t&quot;);&#xD;
+						}&#xD;
+&#xD;
+						System.out.println();&#xD;
+						for (int i = 0; i &lt; result.size(); i++) {&#xD;
+							AllPlayer player = selectPlayer(Integer.parseInt(result.get(i) + &quot;&quot;));&#xD;
+							System.out.print(player.getName() + &quot;\t&quot;);&#xD;
+						}&#xD;
+&#xD;
+						System.out.println();&#xD;
+						for (int i = 0; i &lt; result.size(); i++) {&#xD;
+							AllPlayer player = selectPlayer(Integer.parseInt(result.get(i)));&#xD;
+							System.out.print(player.getStat() + &quot;\t&quot;);&#xD;
+&#xD;
+						}&#xD;
+&#xD;
+						System.out.println();&#xD;
+						System.out.print(&quot;출전할 선수를 골라주세요 >> &quot;);&#xD;
+						int ch = sc.nextInt();&#xD;
+&#xD;
+//					&#xD;
+//					&#xD;
+//					sql = &quot;select a.p_name, m.num from allplayer a,myplayer m where a.p_id=m.p_id and m.num =?&quot;;&#xD;
+//					psmt = conn.prepareStatement(sql);&#xD;
+//					psmt.setInt(1, ch);&#xD;
+//					rs = psmt.executeQuery();&#xD;
+//					&#xD;
+//					while (rs.next()) {&#xD;
+//						m_num = rs.getInt(1);&#xD;
+//						p_name = rs.getString(2);&#xD;
+//						p_stat = rs.getInt(3);&#xD;
+//						System.out.println(m_num + &quot;번 투수&quot; + p_name + &quot;등판&quot;);&#xD;
+//						System.out.println(&quot;선택한 선수의 능력치&quot; + p_stat);&#xD;
+//					}&#xD;
+&#xD;
+						AllPlayer player = selectPlayer(Integer.parseInt(result.get(ch - 1)));&#xD;
+						p_stat = player.getStat();&#xD;
+&#xD;
+						/*&#xD;
+						 * /////////////////////////////////////////////////////////////////////////////&#xD;
+						 * /////////////////////// sql =&#xD;
+						 * &quot;select m.p_stat, a.p_name, m.num from myplayer m, allplayer a where m.p_id = a.p_id and m.id=?&quot;&#xD;
+						 * ; psmt = conn.prepareStatement(sql); psmt.setString(1, id); rs =&#xD;
+						 * psmt.executeQuery(); int i = 1; while (rs.next()) { System.out.print(&quot;[&quot; +&#xD;
+						 * rs.getInt(3) + &quot;]&quot;); System.out.print(rs.getString(2) + &quot; &quot;);&#xD;
+						 * System.out.println(rs.getInt(1) + &quot;\t&quot;); System.out.println(); i++; // 왔습니다!&#xD;
+						 * 저기 i를 1로 입력하고 while 문을 걸었는데 1이 안바껴요아 } System.out.print(&quot;출전할 선수를 선택하십시오.  &quot;);&#xD;
+						 * int ch = sc.nextInt(); System.out.println(); sql =&#xD;
+						 * &quot;select g.id, m.p_id, m.p_stat from myplayer m,g_user g where m id =g id &quot;;&#xD;
+						 * // id에 해당하는 선수들의 총 수를 num에 받기.&#xD;
+						 * &#xD;
+						 * // 선수들의 번호들을 int배열&#xD;
+						 * &#xD;
+						 * &#xD;
+						 * sql =&#xD;
+						 * &quot;select a.p_name, m.num, a.p_stat from allplayer a,myplayer m where a.p_id=m.p_id&quot;&#xD;
+						 * ; psmt = conn.prepareStatement(sql); rs = psmt.executeQuery();&#xD;
+						 * &#xD;
+						 * int m_num = 0; String p_name = null; int p_stat = 0;&#xD;
+						 * &#xD;
+						 * &#xD;
+						 * while (rs.next()) { p_name = rs.getString(1); m_num = rs.getInt(2); p_stat =&#xD;
+						 * rs.getInt(3); System.out.println(&quot;[&quot; + m_num + &quot;]&quot; + &quot; 번 &quot; + p_name + &quot; 능력치:&quot;&#xD;
+						 * + p_stat); }&#xD;
+						 * &#xD;
+						 * &#xD;
+						 * sql =&#xD;
+						 * &quot;select a.p_name, m.num, m.p_stat from allplayer a,myplayer m where a.p_id=m.p_id and m.num=?&quot;&#xD;
+						 * ; psmt = conn.prepareStatement(sql); psmt.setInt(1, ch); // psmt.setString(1,&#xD;
+						 * id); rs = psmt.executeQuery();&#xD;
+						 * &#xD;
+						 * while (rs.next()) { m_num = rs.getInt(2); p_name = rs.getString(1); p_stat =&#xD;
+						 * rs.getInt(3); System.out.println(m_num + &quot;번 투수 &quot; + p_name + &quot; 등판&quot;);&#xD;
+						 * System.out.println(); try { Thread.sleep(1000); } catch (InterruptedException&#xD;
+						 * e) { e.printStackTrace(); } System.out.println(&quot;선택한 선수의 능력치&quot; + p_stat);&#xD;
+						 * System.out.println(); try { Thread.sleep(1000); } catch (InterruptedException&#xD;
+						 * e) { e.printStackTrace(); } }&#xD;
+						 */&#xD;
+&#xD;
+						////////////////////////////////////////////////////////////////////////////////////////////&#xD;
+						/*&#xD;
+						 * int m_num = 0; String p_name = null; sql&#xD;
+						 * =&quot;select a.p_name, m.num, m.p_stat from allplayer a,myplayer m where a.p_id=m.p_id and m.num=?&quot;&#xD;
+						 * ; psmt = conn.prepareStatement(sql); psmt.setInt(1, ch);&#xD;
+						 * psmt.setString(1,id); rs = psmt.executeQuery(); while (rs.next()) { m_num =&#xD;
+						 * rs.getInt(2); p_name = rs.getString(1); p_stat =rs.getInt(3);&#xD;
+						 * System.out.println(m_num + &quot;번 투수 &quot; + p_name + &quot; 등판&quot;); System.out.println();&#xD;
+						 * try { Thread.sleep(1000); } catch (InterruptedException e) {&#xD;
+						 * e.printStackTrace(); } System.out.println(&quot;선택한 선수의 능력치&quot; + p_stat);&#xD;
+						 * System.out.println(); try { Thread.sleep(1000); } catch (InterruptedException&#xD;
+						 * e) { e.printStackTrace(); } }&#xD;
+						 */&#xD;
+						int enemy = 0;&#xD;
+						sql = &quot;select a.p_name from allplayer a where not in table myplayer m&quot;;&#xD;
+						Random rd = new Random();&#xD;
+						enemy = rd.nextInt(100) + 1;&#xD;
+						System.out.println(&quot;내 선수의 능력치는 &quot; + p_stat + &quot;입니다.&quot;);&#xD;
+						System.out.println();&#xD;
+						try {&#xD;
+							Thread.sleep(300);&#xD;
+						} catch (InterruptedException e) {&#xD;
+							e.printStackTrace();&#xD;
+						}&#xD;
+						System.out.println(&quot;상대 선수의 능력치는 &quot; + enemy + &quot;입니다.&quot;);&#xD;
+						System.out.println();&#xD;
+						try {&#xD;
+							Thread.sleep(500);&#xD;
+						} catch (InterruptedException e) {&#xD;
+							e.printStackTrace();&#xD;
+						}&#xD;
+						if (Math.abs(p_stat - enemy) &lt; 30) {&#xD;
+							System.out.println(&quot;놓쳤습니다.&quot;);&#xD;
+							try {&#xD;
+								Thread.sleep(500);&#xD;
+							} catch (InterruptedException e) {&#xD;
+								e.printStackTrace();&#xD;
+							}&#xD;
+							System.out.println(&quot;스트라이크&quot;);&#xD;
+							a = a + 1;&#xD;
+							try {&#xD;
+								Thread.sleep(500);&#xD;
+							} catch (InterruptedException e) {&#xD;
+								e.printStackTrace();&#xD;
+							}&#xD;
+							System.out.println(&quot;스트라이크&quot; + &quot;  &quot; + a + &quot;!&quot;);&#xD;
+							try {&#xD;
+								Thread.sleep(500);&#xD;
+							} catch (InterruptedException e) {&#xD;
+								e.printStackTrace();&#xD;
+							}&#xD;
+						} else if (Math.abs(p_stat - enemy) &lt; 60) {&#xD;
+							System.out.print(&quot;쳤습니다.   &quot;);&#xD;
+							try {&#xD;
+								Thread.sleep(500);&#xD;
+							} catch (InterruptedException e) {&#xD;
+								e.printStackTrace();&#xD;
+							}&#xD;
+							System.out.println(&quot;안타&quot;);&#xD;
+							score = score + 1;&#xD;
+							a = 0;&#xD;
+							try {&#xD;
+								Thread.sleep(500);&#xD;
+							} catch (InterruptedException e) {&#xD;
+								e.printStackTrace();&#xD;
+							}&#xD;
+							System.out.println(score + &quot;점 획득!&quot;);&#xD;
+							System.out.println();&#xD;
+							System.out.println();&#xD;
+							try {&#xD;
+								Thread.sleep(500);&#xD;
+							} catch (InterruptedException e) {&#xD;
+								e.printStackTrace();&#xD;
+							}&#xD;
+						} else {&#xD;
+							System.out.print(&quot;쳤습니다. 쭉쭉 뻗어나갑니다.    &quot;);&#xD;
+							try {&#xD;
+								Thread.sleep(500);&#xD;
+							} catch (InterruptedException e) {&#xD;
+								e.printStackTrace();&#xD;
+							}&#xD;
+							System.out.println(&quot;홈런&quot;);&#xD;
+							try {&#xD;
+								Thread.sleep(500);&#xD;
+							} catch (InterruptedException e) {&#xD;
+								e.printStackTrace();&#xD;
+							}&#xD;
+							score = score + 2;&#xD;
+							a = 0;&#xD;
+							System.out.println(score + &quot;점 획득!&quot;);&#xD;
+							System.out.println();&#xD;
+							System.out.println();&#xD;
+							try {&#xD;
+								Thread.sleep(500);&#xD;
+							} catch (InterruptedException e) {&#xD;
+								e.printStackTrace();&#xD;
+							}&#xD;
+						}&#xD;
+					}&#xD;
+//&#xD;
+				} else if (a >= 3) {&#xD;
+					System.out.println(&quot;쓰리 스트라이크 선수교체!&quot;);&#xD;
+					try {&#xD;
+						Thread.sleep(500);&#xD;
+					} catch (InterruptedException e) {&#xD;
+						e.printStackTrace();&#xD;
+					}&#xD;
+					System.out.println(&quot;당신은 패배했습니다.한 판 더 하시겠습니까 y/n?&quot;);&#xD;
+					try {&#xD;
+						Thread.sleep(500);&#xD;
+					} catch (InterruptedException e) {&#xD;
+						e.printStackTrace();&#xD;
+					}&#xD;
+					String c = sc.next();&#xD;
+					if (add > 0) {&#xD;
+						sql = &quot;update g_user set score=score+1 where id=?&quot;;&#xD;
+						psmt = conn.prepareStatement(sql);&#xD;
+						psmt.setString(1, id);&#xD;
+						psmt.executeUpdate();&#xD;
+					}&#xD;
+					if (c.equals(&quot;y&quot;) || c.equals(&quot;Y&quot;)) {&#xD;
+						a = 0;&#xD;
+						score = 0;&#xD;
+					} else {&#xD;
+						System.out.println(&quot;게임을 종료합니다.&quot;);&#xD;
+						break;&#xD;
+					}&#xD;
+&#xD;
+				} else if (score >= 10) {&#xD;
+					System.out.println();&#xD;
+					System.out.println(&quot;게임 승리!!&quot;);&#xD;
+					add = 1;&#xD;
+					if (add > 0) {&#xD;
+&#xD;
+						sql = &quot;update g_user set score=score+1 where id=?&quot;;&#xD;
+						psmt = conn.prepareStatement(sql);&#xD;
+						psmt.setString(1, id);&#xD;
+						psmt.executeUpdate();&#xD;
+&#xD;
+						sql = &quot;select score from g_user where id=?&quot;;&#xD;
+						psmt = conn.prepareStatement(sql);&#xD;
+						psmt.setString(1, id);&#xD;
+						rs = psmt.executeQuery();&#xD;
+						rs.next();&#xD;
+&#xD;
+						int count = rs.getInt(1);&#xD;
+&#xD;
+						if (count != 0 &amp;&amp; count % 2 == 0) {&#xD;
+&#xD;
+							sql = &quot;update  g_user set pick = ? where id = ?&quot;;&#xD;
+							psmt = conn.prepareStatement(sql);&#xD;
+							psmt.setInt(1, 1);&#xD;
+							psmt.setString(2, id);&#xD;
+							psmt.executeUpdate();&#xD;
+						}&#xD;
+						try {&#xD;
+							Thread.sleep(500);&#xD;
+						} catch (InterruptedException e) {&#xD;
+							e.printStackTrace();&#xD;
+						}&#xD;
+					}&#xD;
+					System.out.println(&quot;게임을 이겼습니다.한 판 더 하시겠습니까 y/n?&quot;);&#xD;
+					String c = sc.next();&#xD;
+					if (c.equals(&quot;y&quot;) || c.equals(&quot;Y&quot;)) {&#xD;
+						a = 0;&#xD;
+						score = 0;&#xD;
+					} else {&#xD;
+						System.out.println(&quot;게임을 종료합니다.&quot;);&#xD;
+						break;&#xD;
+					}&#xD;
+				}&#xD;
+&#xD;
+			} catch (Exception e) {&#xD;
+				e.printStackTrace();&#xD;
+			}&#xD;
+			try {&#xD;
+&#xD;
+				if (add > 0) {&#xD;
+&#xD;
+					int sco = 0;&#xD;
+					sql = &quot;select score from g_user where id = ?&quot;;&#xD;
+					psmt = conn.prepareStatement(sql);&#xD;
+					psmt.setString(1, p_id);&#xD;
+					psmt.executeQuery();&#xD;
+&#xD;
+					if (rs.next()) {&#xD;
+						sco = rs.getInt(1);&#xD;
+					}&#xD;
+&#xD;
+					sql = &quot;update g_user set score = ? where id=?&quot;;&#xD;
+					psmt = conn.prepareStatement(sql);&#xD;
+					System.out.println(sco);&#xD;
+					sco = sco + 1;&#xD;
+					psmt.setInt(1, sco);&#xD;
+					psmt.setString(2, p_id);&#xD;
+					psmt.executeUpdate();&#xD;
+&#xD;
+				}&#xD;
+			} catch (Exception e) {&#xD;
+				e.printStackTrace();&#xD;
+			}&#xD;
+		}&#xD;
+&#xD;
+	</body>
+        </ownedBehavior>
+        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_4YmgRTYcEeyQU9d2fjnV0g" name="getRank" specification="_4V_RIDYcEeyQU9d2fjnV0g">
+          <language>java</language>
+          <body>int i = 0;&#xD;
+&#xD;
+		dbConn();&#xD;
+&#xD;
+		try {&#xD;
+			sql = &quot;select id, score, RANK() over (order by score desc) as rank from g_user&quot;;&#xD;
+			psmt = conn.prepareStatement(sql);&#xD;
+			rs = psmt.executeQuery();&#xD;
+			while (rs.next()) {&#xD;
+				i++;&#xD;
+				System.out.print(i + &quot;위  &quot;);&#xD;
+				System.out.print(rs.getString(&quot;id&quot;) + &quot;\t&quot;);&#xD;
+				System.out.println(rs.getInt(&quot;score&quot;) + &quot;점&quot;);&#xD;
+				try {&#xD;
+					Thread.sleep(500);&#xD;
+				} catch (InterruptedException e) {&#xD;
+					e.printStackTrace();&#xD;
+				}&#xD;
+			}&#xD;
+		} catch (Exception e) {&#xD;
+			e.printStackTrace();&#xD;
+		} finally {&#xD;
+			dbClose();&#xD;
+		}&#xD;
+&#xD;
+	</body>
+        </ownedBehavior>
+        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_4YnHUDYcEeyQU9d2fjnV0g" name="playerRegist" specification="_4V_4MDYcEeyQU9d2fjnV0g">
+          <ownedParameter xmi:id="_4YnHUTYcEeyQU9d2fjnV0g" name="g_id">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </ownedParameter>
+          <ownedParameter xmi:id="_4YnHUjYcEeyQU9d2fjnV0g" name="p_id">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </ownedParameter>
+          <language>java</language>
+          <body>dbConn();&#xD;
+&#xD;
+		sql = &quot;select id, pw, score, pick from g_user where id = ?&quot;;&#xD;
+&#xD;
+		int score = 0;&#xD;
+&#xD;
+		try {&#xD;
+			psmt = conn.prepareStatement(sql);&#xD;
+			psmt.setString(1, g_id);&#xD;
+&#xD;
+			rs = psmt.executeQuery();&#xD;
+&#xD;
+			if (rs.next()) {&#xD;
+				mm.setId(rs.getString(1));&#xD;
+				mm.setPw(rs.getString(2));&#xD;
+				mm.setRank(rs.getInt(3));&#xD;
+				mm.setPick(rs.getInt(4));&#xD;
+&#xD;
+			} else {&#xD;
+				mm = null;&#xD;
+			}&#xD;
+&#xD;
+			sql = &quot;select p_name, p_stat from allplayer where p_id = ?&quot;;&#xD;
+&#xD;
+			psmt = conn.prepareStatement(sql);&#xD;
+			psmt.setString(1, p_id);&#xD;
+&#xD;
+			rs = psmt.executeQuery();&#xD;
+&#xD;
+			if (rs.next()) {&#xD;
+				ap.setName(rs.getString(1));&#xD;
+				ap.setStat(rs.getInt(2));&#xD;
+&#xD;
+			} else {&#xD;
+				mm = null;&#xD;
+			}&#xD;
+&#xD;
+			sql = &quot;insert into myplayer (num, id, p_id, p_stat) values(mp_num_seq.nextval, ?, ?, ?)&quot;;&#xD;
+&#xD;
+			psmt = conn.prepareStatement(sql);&#xD;
+&#xD;
+			psmt.setString(1, g_id);&#xD;
+			psmt.setString(2, p_id);&#xD;
+			psmt.setInt(3, ap.getStat());&#xD;
+&#xD;
+			result = psmt.executeUpdate();&#xD;
+&#xD;
+		} catch (Exception e) {&#xD;
+			e.printStackTrace();&#xD;
+		}&#xD;
+	</body>
+        </ownedBehavior>
+        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_4YnHUzYcEeyQU9d2fjnV0g" name="playerPickRegist" specification="_4WAfQDYcEeyQU9d2fjnV0g">
+          <ownedParameter xmi:id="_4YnHVDYcEeyQU9d2fjnV0g" name="id">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </ownedParameter>
+          <ownedParameter xmi:id="_4YnHVTYcEeyQU9d2fjnV0g" name="count">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+          </ownedParameter>
+          <language>java</language>
+          <body>dbConn();&#xD;
+		try {&#xD;
+			sql = &quot;update  g_user set pick = ? where id = ?&quot;;&#xD;
+&#xD;
+			psmt = conn.prepareStatement(sql);&#xD;
+			psmt.setInt(1, count);&#xD;
+			psmt.setString(2, id);&#xD;
+&#xD;
+			result = psmt.executeUpdate();&#xD;
+&#xD;
+		} catch (Exception e) {&#xD;
+			e.printStackTrace();&#xD;
+		}&#xD;
+	</body>
+        </ownedBehavior>
+        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_4YnHVjYcEeyQU9d2fjnV0g" name="checkPlayer" specification="_4WBGUDYcEeyQU9d2fjnV0g">
+          <ownedParameter xmi:id="_4YnHVzYcEeyQU9d2fjnV0g" name="id">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </ownedParameter>
+          <ownedParameter xmi:id="_4YnHWDYcEeyQU9d2fjnV0g" isOrdered="true" direction="return">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_4YnHWTYcEeyQU9d2fjnV0g" value="*"/>
+          </ownedParameter>
+          <language>java</language>
+          <body>List&lt;String> result = new ArrayList&lt;>();&#xD;
+		int num = 0;// id에 해당하는 선수들의 수&#xD;
+		// db연결&#xD;
+&#xD;
+		dbConn();&#xD;
+&#xD;
+		try {&#xD;
+&#xD;
+			sql = &quot;select p_id from myplayer where id = ? &quot;;&#xD;
+			// id에 해당하는 선수들의 총 수를 num에 받기.&#xD;
+&#xD;
+			psmt = conn.prepareStatement(sql);&#xD;
+			psmt.setString(1, id);&#xD;
+&#xD;
+			rs = psmt.executeQuery();&#xD;
+&#xD;
+			while (rs.next()) {&#xD;
+				result.add(rs.getString(&quot;p_id&quot;));&#xD;
+&#xD;
+			}&#xD;
+&#xD;
+		} catch (SQLException e) {&#xD;
+			// TODO Auto-generated catch block&#xD;
+			e.printStackTrace();&#xD;
+		}&#xD;
+&#xD;
+		// 선수들의 번호를 담은 a배열을 출력.&#xD;
+		return result;&#xD;
+		//&#xD;
+&#xD;
+	</body>
+        </ownedBehavior>
+        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_4YnHWjYcEeyQU9d2fjnV0g" name="havePlayer" specification="_4WBtYDYcEeyQU9d2fjnV0g">
+          <ownedParameter xmi:id="_4YnHWzYcEeyQU9d2fjnV0g" name="id">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </ownedParameter>
+          <ownedParameter xmi:id="_4YnHXDYcEeyQU9d2fjnV0g" direction="return">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+          </ownedParameter>
+          <language>java</language>
+          <body>dbConn();&#xD;
+		String name = &quot;&quot;;&#xD;
+		try {&#xD;
+&#xD;
+			sql = &quot;select p_id from myplayer where id = ? &quot;;&#xD;
+&#xD;
+			psmt = conn.prepareStatement(sql);&#xD;
+			psmt.setString(1, id);&#xD;
+&#xD;
+			rs = psmt.executeQuery();&#xD;
+			while (rs.next()) {&#xD;
+				name = rs.getString(&quot;p_id&quot;);&#xD;
+&#xD;
+			}&#xD;
+&#xD;
+		} catch (SQLException e) {&#xD;
+			// TODO Auto-generated catch block&#xD;
+			e.printStackTrace();&#xD;
+		}&#xD;
+		if (name.equals(&quot;&quot;)) {&#xD;
+			return false;&#xD;
+		} else&#xD;
+			return true;&#xD;
+&#xD;
+	</body>
+        </ownedBehavior>
+        <ownedOperation xmi:id="_4V8N0DYcEeyQU9d2fjnV0g" name="dbConn" method="_4Yl5MDYcEeyQU9d2fjnV0g"/>
+        <ownedOperation xmi:id="_4V804DYcEeyQU9d2fjnV0g" name="dbClose" method="_4Yl5MTYcEeyQU9d2fjnV0g"/>
+        <ownedOperation xmi:id="_4V9b8DYcEeyQU9d2fjnV0g" name="selectPlayer" method="_4Yl5MjYcEeyQU9d2fjnV0g">
+          <ownedParameter xmi:id="_4V9b8TYcEeyQU9d2fjnV0g" name="p_id">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+          </ownedParameter>
+          <ownedParameter xmi:id="_4Xno0DYcEeyQU9d2fjnV0g" type="_4Vor0DYcEeyQU9d2fjnV0g" direction="return"/>
+        </ownedOperation>
+        <ownedOperation xmi:id="_4V-DADYcEeyQU9d2fjnV0g" name="registerPlayer" method="_4YmgQDYcEeyQU9d2fjnV0g"/>
+        <ownedOperation xmi:id="_4V-DATYcEeyQU9d2fjnV0g" name="printPlayer" method="_4YmgQTYcEeyQU9d2fjnV0g"/>
+        <ownedOperation xmi:id="_4V_RIDYcEeyQU9d2fjnV0g" name="getRank" visibility="package" method="_4YmgRTYcEeyQU9d2fjnV0g"/>
+        <ownedOperation xmi:id="_4V_4MDYcEeyQU9d2fjnV0g" name="playerRegist" method="_4YnHUDYcEeyQU9d2fjnV0g">
+          <ownedParameter xmi:id="_4V_4MTYcEeyQU9d2fjnV0g" name="g_id">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </ownedParameter>
+          <ownedParameter xmi:id="_4V_4MjYcEeyQU9d2fjnV0g" name="p_id">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:id="_4WAfQDYcEeyQU9d2fjnV0g" name="playerPickRegist" method="_4YnHUzYcEeyQU9d2fjnV0g">
+          <ownedParameter xmi:id="_4WAfQTYcEeyQU9d2fjnV0g" name="id">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </ownedParameter>
+          <ownedParameter xmi:id="_4WAfQjYcEeyQU9d2fjnV0g" name="count">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:id="_4WBGUDYcEeyQU9d2fjnV0g" name="checkPlayer" method="_4YnHVjYcEeyQU9d2fjnV0g">
+          <ownedParameter xmi:id="_4WBGUTYcEeyQU9d2fjnV0g" name="id">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </ownedParameter>
+          <ownedParameter xmi:id="_4WBGUjYcEeyQU9d2fjnV0g" isOrdered="true" direction="return">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_4WBGUzYcEeyQU9d2fjnV0g" value="*"/>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:id="_4WBtYDYcEeyQU9d2fjnV0g" name="havePlayer" method="_4YnHWjYcEeyQU9d2fjnV0g">
+          <ownedParameter xmi:id="_4WBtYTYcEeyQU9d2fjnV0g" name="id">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </ownedParameter>
+          <ownedParameter xmi:id="_4WBtYjYcEeyQU9d2fjnV0g" direction="return">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:id="_4X58sDYcEeyQU9d2fjnV0g" name="battlePlayer" method="_4YmgQjYcEeyQU9d2fjnV0g">
+          <ownedParameter xmi:id="_4X58sTYcEeyQU9d2fjnV0g" name="p_id">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </ownedParameter>
+          <ownedParameter xmi:id="_4X58sjYcEeyQU9d2fjnV0g" name="result" type="_4XiwUDYcEeyQU9d2fjnV0g"/>
+        </ownedOperation>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_4WH0ADYcEeyQU9d2fjnV0g" name="LoginManagement">
+        <ownedAttribute xmi:id="_4YJ0UDYcEeyQU9d2fjnV0g" name="conn" visibility="package" type="_4XaNcDYcEeyQU9d2fjnV0g" association="_4Y73cTYcEeyQU9d2fjnV0g">
+          <defaultValue xmi:type="uml:LiteralString" xmi:id="_4YJ0UTYcEeyQU9d2fjnV0g" value="null"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_4YKbYTYcEeyQU9d2fjnV0g" name="psmt" visibility="package" type="_4XcpsTYcEeyQU9d2fjnV0g" association="_4Y9FkDYcEeyQU9d2fjnV0g">
+          <defaultValue xmi:type="uml:LiteralString" xmi:id="_4YKbYjYcEeyQU9d2fjnV0g" value="null"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_4YLCcTYcEeyQU9d2fjnV0g" name="rs" visibility="package" type="_4Xd30DYcEeyQU9d2fjnV0g" association="_4Y9soTYcEeyQU9d2fjnV0g">
+          <defaultValue xmi:type="uml:LiteralString" xmi:id="_4YLCcjYcEeyQU9d2fjnV0g" value="null"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_4YLCdDYcEeyQU9d2fjnV0g" name="mb" visibility="package" type="_4WQ98TYcEeyQU9d2fjnV0g" association="_4Y9spDYcEeyQU9d2fjnV0g">
+          <defaultValue xmi:type="uml:LiteralString" xmi:id="_4YLCdTYcEeyQU9d2fjnV0g" value="new Member()"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_4YOs0DYcEeyQU9d2fjnV0g" name="result" visibility="package">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+          <defaultValue xmi:type="uml:LiteralString" xmi:id="_4YOs0TYcEeyQU9d2fjnV0g" value="0"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_4YPT4TYcEeyQU9d2fjnV0g" name="sql" visibility="package">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedAttribute>
+        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_4YnuYDYcEeyQU9d2fjnV0g" name="dbConn" specification="_4WKQQDYcEeyQU9d2fjnV0g">
+          <language>java</language>
+          <body>try {&#xD;
+			Class.forName(&quot;oracle.jdbc.driver.OracleDriver&quot;);&#xD;
+&#xD;
+			// 2.DB연결&#xD;
+			String url = &quot;jdbc:oracle:thin:@project-db-stu.ddns.net:1524:xe&quot;;&#xD;
+			String user = &quot;cgi_2_2_1022&quot;;&#xD;
+			String password = &quot;smhrd2&quot;;&#xD;
+			conn = DriverManager.getConnection(url, user, password);&#xD;
+&#xD;
+		} catch (Exception e) {&#xD;
+			// Exception&#xD;
+			System.out.println(&quot;오류확인&quot;);&#xD;
+			e.printStackTrace();&#xD;
+		}&#xD;
+	</body>
+        </ownedBehavior>
+        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_4YnuYTYcEeyQU9d2fjnV0g" name="dbClose" specification="_4WKQQTYcEeyQU9d2fjnV0g">
+          <language>java</language>
+          <body>try {&#xD;
+&#xD;
+			if (rs != null) {&#xD;
+				rs.close();&#xD;
+			}&#xD;
+			if (psmt != null) {&#xD;
+				psmt.close();&#xD;
+			}&#xD;
+			if (conn != null) {&#xD;
+				conn.close();&#xD;
+			}&#xD;
+		} catch (Exception e) {&#xD;
+&#xD;
+			e.printStackTrace();&#xD;
+		}&#xD;
+	</body>
+        </ownedBehavior>
+        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_4YnuYjYcEeyQU9d2fjnV0g" name="register" specification="_4WK3UDYcEeyQU9d2fjnV0g">
+          <ownedParameter xmi:id="_4YnuYzYcEeyQU9d2fjnV0g" name="id">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </ownedParameter>
+          <ownedParameter xmi:id="_4YnuZDYcEeyQU9d2fjnV0g" name="pw">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </ownedParameter>
+          <ownedParameter xmi:id="_4YnuZTYcEeyQU9d2fjnV0g" direction="return">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+          </ownedParameter>
+          <language>java</language>
+          <body>dbConn();&#xD;
+&#xD;
+		sql = &quot;insert into g_user(id,pw,score,pick) values (?,?,?,?)&quot;;&#xD;
+&#xD;
+		int score = 0;&#xD;
+		int pickDefault = 5;&#xD;
+&#xD;
+		try {&#xD;
+			psmt = conn.prepareStatement(sql);&#xD;
+			psmt.setString(1, id);&#xD;
+			psmt.setString(2, pw);&#xD;
+			psmt.setInt(3, score);&#xD;
+			psmt.setInt(4, pickDefault);&#xD;
+&#xD;
+			result = psmt.executeUpdate();&#xD;
+&#xD;
+		} catch (Exception e) {&#xD;
+			&#xD;
+		} finally {&#xD;
+			dbClose();&#xD;
+		}&#xD;
+		return result;&#xD;
+&#xD;
+	</body>
+        </ownedBehavior>
+        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_4YnuZjYcEeyQU9d2fjnV0g" name="login" specification="_4WLeYTYcEeyQU9d2fjnV0g">
+          <ownedParameter xmi:id="_4YnuZzYcEeyQU9d2fjnV0g" name="id">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </ownedParameter>
+          <ownedParameter xmi:id="_4YnuaDYcEeyQU9d2fjnV0g" name="pw">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </ownedParameter>
+          <ownedParameter xmi:id="_4YnuaTYcEeyQU9d2fjnV0g" type="_4WQ98TYcEeyQU9d2fjnV0g" direction="return"/>
+          <language>java</language>
+          <body>dbConn();&#xD;
+&#xD;
+		sql = &quot;select * from g_user where id = ? and pw = ?&quot;;&#xD;
+&#xD;
+		try {&#xD;
+			psmt = conn.prepareStatement(sql);&#xD;
+			psmt.setString(1, id);&#xD;
+			psmt.setString(2, pw);&#xD;
+&#xD;
+			rs = psmt.executeQuery();&#xD;
+			if (rs.next()) {&#xD;
+				mb.setId(rs.getString(1));&#xD;
+				mb.setPw(rs.getNString(2));&#xD;
+				mb.setRank(rs.getInt(3));&#xD;
+				mb.setPick(rs.getInt(4));&#xD;
+			} else {&#xD;
+				mb = null;&#xD;
+			}&#xD;
+&#xD;
+		} catch (Exception e) {&#xD;
+&#xD;
+		} finally {&#xD;
+			dbClose();&#xD;
+		}&#xD;
+		return mb;&#xD;
+&#xD;
+	</body>
+        </ownedBehavior>
+        <ownedOperation xmi:id="_4WKQQDYcEeyQU9d2fjnV0g" name="dbConn" method="_4YnuYDYcEeyQU9d2fjnV0g"/>
+        <ownedOperation xmi:id="_4WKQQTYcEeyQU9d2fjnV0g" name="dbClose" method="_4YnuYTYcEeyQU9d2fjnV0g"/>
+        <ownedOperation xmi:id="_4WK3UDYcEeyQU9d2fjnV0g" name="register" method="_4YnuYjYcEeyQU9d2fjnV0g">
+          <ownedParameter xmi:id="_4WK3UTYcEeyQU9d2fjnV0g" name="id">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </ownedParameter>
+          <ownedParameter xmi:id="_4WK3UjYcEeyQU9d2fjnV0g" name="pw">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </ownedParameter>
+          <ownedParameter xmi:id="_4WLeYDYcEeyQU9d2fjnV0g" direction="return">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:id="_4WLeYTYcEeyQU9d2fjnV0g" name="login" method="_4YnuZjYcEeyQU9d2fjnV0g">
+          <ownedParameter xmi:id="_4WMFcDYcEeyQU9d2fjnV0g" name="id">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </ownedParameter>
+          <ownedParameter xmi:id="_4WMFcTYcEeyQU9d2fjnV0g" name="pw">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </ownedParameter>
+          <ownedParameter xmi:id="_4XtIYDYcEeyQU9d2fjnV0g" type="_4WQ98TYcEeyQU9d2fjnV0g" direction="return"/>
+        </ownedOperation>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_4WPIwDYcEeyQU9d2fjnV0g" name="Main">
+        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_4YoVcDYcEeyQU9d2fjnV0g" name="main" specification="_4WQW4DYcEeyQU9d2fjnV0g">
+          <ownedParameter xmi:id="_4YoVcTYcEeyQU9d2fjnV0g" name="args">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_4YoVcjYcEeyQU9d2fjnV0g" value="*"/>
+          </ownedParameter>
+          <language>java</language>
+          <body>AudioInputStream ais;&#xD;
+		try {&#xD;
+			ais = AudioSystem.getAudioInputStream(new File(&quot;file(bgm)/music shaker.wav&quot;));&#xD;
+			 Clip clip;&#xD;
+				clip = AudioSystem.getClip();&#xD;
+			&#xD;
+		        &#xD;
+	           clip.open(ais);&#xD;
+	           clip.start();			&#xD;
+		&#xD;
+		} catch (Exception e) {&#xD;
+			// TODO Auto-generated catch block&#xD;
+			e.printStackTrace();&#xD;
+		}&#xD;
+       &#xD;
+		&#xD;
+		UserInterFace u = new UserInterFace();&#xD;
+		u.start();&#xD;
+		&#xD;
+&#xD;
+			&#xD;
+	</body>
+        </ownedBehavior>
+        <ownedOperation xmi:id="_4WQW4DYcEeyQU9d2fjnV0g" name="main" isStatic="true" method="_4YoVcDYcEeyQU9d2fjnV0g">
+          <ownedParameter xmi:id="_4WQW4TYcEeyQU9d2fjnV0g" name="args">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_4WQ98DYcEeyQU9d2fjnV0g" value="*"/>
+          </ownedParameter>
+        </ownedOperation>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_4WQ98TYcEeyQU9d2fjnV0g" name="Member">
+        <ownedAttribute xmi:id="_4YRJEDYcEeyQU9d2fjnV0g" name="id" isStatic="true">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_4YRwIDYcEeyQU9d2fjnV0g" name="pw">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_4YRwITYcEeyQU9d2fjnV0g" name="rank">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_4YRwIjYcEeyQU9d2fjnV0g" name="pick">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+        </ownedAttribute>
+        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_4Yo8gDYcEeyQU9d2fjnV0g" name="member" specification="_4WSzIDYcEeyQU9d2fjnV0g">
+          <ownedParameter xmi:id="_4Yo8gTYcEeyQU9d2fjnV0g" name="id">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </ownedParameter>
+          <ownedParameter xmi:id="_4Yo8gjYcEeyQU9d2fjnV0g" name="pw">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </ownedParameter>
+          <ownedParameter xmi:id="_4Yo8gzYcEeyQU9d2fjnV0g" name="rank">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+          </ownedParameter>
+          <ownedParameter xmi:id="_4Yo8hDYcEeyQU9d2fjnV0g" name="pick">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+          </ownedParameter>
+          <language>java</language>
+          <body>this.id=id;&#xD;
+		this.pw=pw;&#xD;
+		this.rank=rank;&#xD;
+		this.pick=pick;&#xD;
+		&#xD;
+	</body>
+        </ownedBehavior>
+        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_4YpjkDYcEeyQU9d2fjnV0g" name="getId" specification="_4WUBQDYcEeyQU9d2fjnV0g">
+          <ownedParameter xmi:id="_4YpjkTYcEeyQU9d2fjnV0g" direction="return">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </ownedParameter>
+          <language>java</language>
+          <body>return id;&#xD;
+	</body>
+        </ownedBehavior>
+        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_4YpjkjYcEeyQU9d2fjnV0g" name="setId" specification="_4WVPYDYcEeyQU9d2fjnV0g">
+          <ownedParameter xmi:id="_4YpjkzYcEeyQU9d2fjnV0g" name="id">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </ownedParameter>
+          <language>java</language>
+          <body>this.id = id;&#xD;
+	</body>
+        </ownedBehavior>
+        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_4YpjlDYcEeyQU9d2fjnV0g" name="toString" specification="_4WVPYjYcEeyQU9d2fjnV0g">
+          <ownedParameter xmi:id="_4YpjlTYcEeyQU9d2fjnV0g" direction="return">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </ownedParameter>
+          <language>java</language>
+          <body>return &quot;Member [id=&quot; + id + &quot;, pw=&quot; + pw + &quot;, rank=&quot; + rank + &quot;, pick=&quot; + pick + &quot;]&quot;;&#xD;
+	</body>
+        </ownedBehavior>
+        <ownedOperation xmi:id="_4WSzIDYcEeyQU9d2fjnV0g" name="member" method="_4Yo8gDYcEeyQU9d2fjnV0g">
+          <ownedParameter xmi:id="_4WSzITYcEeyQU9d2fjnV0g" name="id">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </ownedParameter>
+          <ownedParameter xmi:id="_4WSzIjYcEeyQU9d2fjnV0g" name="pw">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </ownedParameter>
+          <ownedParameter xmi:id="_4WSzIzYcEeyQU9d2fjnV0g" name="rank">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+          </ownedParameter>
+          <ownedParameter xmi:id="_4WSzJDYcEeyQU9d2fjnV0g" name="pick">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:id="_4WUBQDYcEeyQU9d2fjnV0g" name="getId" method="_4YpjkDYcEeyQU9d2fjnV0g">
+          <ownedParameter xmi:id="_4WUoUDYcEeyQU9d2fjnV0g" direction="return">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:id="_4WVPYDYcEeyQU9d2fjnV0g" name="setId" method="_4YpjkjYcEeyQU9d2fjnV0g">
+          <ownedParameter xmi:id="_4WVPYTYcEeyQU9d2fjnV0g" name="id">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:id="_4WVPYjYcEeyQU9d2fjnV0g" name="toString" method="_4YpjlDYcEeyQU9d2fjnV0g">
+          <ownedParameter xmi:id="_4WV2cDYcEeyQU9d2fjnV0g" direction="return">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </ownedParameter>
+        </ownedOperation>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_4WXEkDYcEeyQU9d2fjnV0g" name="UserInterFace">
+        <ownedAttribute xmi:id="_4YSXMDYcEeyQU9d2fjnV0g" name="rd" visibility="package" type="_4Xee4TYcEeyQU9d2fjnV0g" association="_4Y-TsTYcEeyQU9d2fjnV0g">
+          <defaultValue xmi:type="uml:LiteralString" xmi:id="_4YS-QDYcEeyQU9d2fjnV0g" value="new Random()"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_4YTlUDYcEeyQU9d2fjnV0g" name="gp" visibility="package" type="_4V5xkDYcEeyQU9d2fjnV0g" association="_4Y-6wTYcEeyQU9d2fjnV0g">
+          <defaultValue xmi:type="uml:LiteralString" xmi:id="_4YTlUTYcEeyQU9d2fjnV0g" value="new GamePlay()"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_4YUMYTYcEeyQU9d2fjnV0g" name="sc" visibility="package" type="_4XjXYTYcEeyQU9d2fjnV0g" association="_4Y-6xDYcEeyQU9d2fjnV0g"/>
+        <ownedAttribute xmi:id="_4YUMYzYcEeyQU9d2fjnV0g" name="lm" visibility="package" type="_4WH0ADYcEeyQU9d2fjnV0g" association="_4Y_h0TYcEeyQU9d2fjnV0g"/>
+        <ownedAttribute xmi:id="_4YUzcTYcEeyQU9d2fjnV0g" name="mb" visibility="package" type="_4WQ98TYcEeyQU9d2fjnV0g" association="_4ZAI4TYcEeyQU9d2fjnV0g">
+          <defaultValue xmi:type="uml:LiteralString" xmi:id="_4YVagDYcEeyQU9d2fjnV0g" value="new Member()"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_4YVagjYcEeyQU9d2fjnV0g" name="key" visibility="package">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+          <defaultValue xmi:type="uml:LiteralString" xmi:id="_4YWBkDYcEeyQU9d2fjnV0g" value="0"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_4YWBkjYcEeyQU9d2fjnV0g" name="result" visibility="package" isOrdered="true">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_4YWBkzYcEeyQU9d2fjnV0g" value="*"/>
+        </ownedAttribute>
+        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_4YqKoDYcEeyQU9d2fjnV0g" name="UserInterFace" specification="_4WY5wDYcEeyQU9d2fjnV0g">
+          <ownedParameter xmi:id="_4YqKoTYcEeyQU9d2fjnV0g" type="_4WXEkDYcEeyQU9d2fjnV0g" direction="return"/>
+          <language>java</language>
+          <body>sc = new Scanner(System.in);&#xD;
+		lm = new LoginManagement();&#xD;
+&#xD;
+	</body>
+        </ownedBehavior>
+        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_4YqKojYcEeyQU9d2fjnV0g" name="start" specification="_4WaH4DYcEeyQU9d2fjnV0g">
+          <language>java</language>
+          <body>// 오프닝 영상&#xD;
+		openingPrint1();&#xD;
+		openingPrint2();&#xD;
+&#xD;
+		while (key != 3) {&#xD;
+			// 메인 창&#xD;
+			mainPrint();&#xD;
+&#xD;
+			try {&#xD;
+				key = sc.nextInt();&#xD;
+			} catch (Exception e) {&#xD;
+				System.out.println(&quot;숫자를 입력해주세요.&quot;);&#xD;
+&#xD;
+			}&#xD;
+&#xD;
+			switch (key) {&#xD;
+&#xD;
+			// 로그인&#xD;
+			case 1:&#xD;
+				String reLogin = &quot;&quot;;&#xD;
+				reLogin = &quot;y&quot;;&#xD;
+&#xD;
+				while (mb == null || reLogin.equals(&quot;y&quot;)) {&#xD;
+					loginPrint();&#xD;
+&#xD;
+					System.out.print(&quot;아이디 >> &quot;);&#xD;
+					String id = sc.next();&#xD;
+&#xD;
+					System.out.print(&quot;비밀번호 >> &quot;);&#xD;
+					String pw = sc.next();&#xD;
+&#xD;
+					mb = lm.login(id, pw);&#xD;
+&#xD;
+					if (mb == null) {&#xD;
+						System.out.println(&quot;회원정보가 없습니다.&quot;);&#xD;
+						reLogin = &quot;s&quot;;&#xD;
+&#xD;
+						while (reLogin.equals(&quot;s&quot;)) {&#xD;
+							System.out.println(&quot;다시 로그인 하시겠습니까? [y,n]&quot;);&#xD;
+							reLogin = sc.next();&#xD;
+&#xD;
+							if (reLogin.equals(&quot;y&quot;) || reLogin.equals(&quot;n&quot;)) {&#xD;
+								break;&#xD;
+							} else {&#xD;
+								System.out.println(&quot;y와 n중에 입력해주세요&quot;);&#xD;
+								reLogin = &quot;s&quot;;&#xD;
+							}&#xD;
+						}&#xD;
+						if (reLogin.equals(&quot;n&quot;)) {&#xD;
+							mb = new Member();&#xD;
+							key = 0;&#xD;
+						}&#xD;
+&#xD;
+					} else {&#xD;
+						System.out.println(&quot;로그인에 성공하였습니다...&quot;);&#xD;
+&#xD;
+						try {&#xD;
+							Thread.sleep(500);&#xD;
+						} catch (InterruptedException e) {&#xD;
+							e.printStackTrace();&#xD;
+						}&#xD;
+						break;&#xD;
+					}&#xD;
+&#xD;
+				}&#xD;
+				if (key == 1) {&#xD;
+					reLogin = &quot;n&quot;;&#xD;
+					key = 3;&#xD;
+					break;&#xD;
+				}&#xD;
+				break;&#xD;
+&#xD;
+			// 회원가입&#xD;
+			case 2:&#xD;
+				int result = 0;&#xD;
+				String reRegister = &quot;&quot;;&#xD;
+				while (result &lt;= 0 || reRegister.equals(&quot;y&quot;)) {&#xD;
+					registerPrint();&#xD;
+&#xD;
+					System.out.print(&quot;아이디 >>&quot;);&#xD;
+					String id = sc.next();&#xD;
+&#xD;
+					System.out.print(&quot;비밀번호 >>&quot;);&#xD;
+					String pw = sc.next();&#xD;
+					result = lm.register(id, pw);&#xD;
+&#xD;
+					if (result > 0) {&#xD;
+						System.out.println(&quot;회원가입에 성공하였습니다!!&quot;);&#xD;
+						reRegister = &quot;n&quot;;&#xD;
+						try {&#xD;
+							Thread.sleep(500);&#xD;
+						} catch (InterruptedException e) {&#xD;
+							e.printStackTrace();&#xD;
+						}&#xD;
+&#xD;
+						break;&#xD;
+					} else {&#xD;
+						System.out.println(&quot;다른 회원이 있습니다!&quot;);&#xD;
+						reRegister = &quot;r&quot;;&#xD;
+&#xD;
+						while (reRegister.equals(&quot;r&quot;)) {&#xD;
+							System.out.println(&quot;다시 회원가입 하시겠습니까? [y,n]&quot;);&#xD;
+							reRegister = sc.next();&#xD;
+&#xD;
+							if (reRegister.equals(&quot;y&quot;) || reRegister.equals(&quot;n&quot;)) {&#xD;
+								if (reRegister.equals(&quot;n&quot;)) {&#xD;
+									result = 1;&#xD;
+								}&#xD;
+								break;&#xD;
+							} else {&#xD;
+								System.out.println(&quot;올바른 글자를 입력해주세요.&quot;);&#xD;
+								reRegister = &quot;r&quot;;&#xD;
+&#xD;
+							}&#xD;
+						}&#xD;
+					}&#xD;
+				}&#xD;
+				break;&#xD;
+&#xD;
+			case 3:&#xD;
+				System.exit(0);&#xD;
+				break;&#xD;
+			default:&#xD;
+				System.out.println(&quot;1,2,3 중에 한 숫자만 써주세요.&quot;);&#xD;
+				try {&#xD;
+					Thread.sleep(1000);&#xD;
+				} catch (InterruptedException e) {&#xD;
+					e.printStackTrace();&#xD;
+				}&#xD;
+			}&#xD;
+&#xD;
+		}&#xD;
+&#xD;
+		while (key != 4) {&#xD;
+			if (key == 5) {&#xD;
+				mainLoginPrintNoClean();// 뽑기했을 때, 바로 아래에 mainLogin창이 나오도록&#xD;
+			} else {&#xD;
+				mainLoginPrint();// 뽑기안한 기본 프린트&#xD;
+			}&#xD;
+				System.out.print(&quot;>> &quot;);&#xD;
+				key = sc.nextInt();&#xD;
+				int num = mb.getPick();// 뽑을 수 받기.&#xD;
+				result = gp.checkPlayer(mb.getId());&#xD;
+&#xD;
+				switch (key) {&#xD;
+				case 1:&#xD;
+					if (mb.getPick() >= 1) {&#xD;
+&#xD;
+						int[] arr = new int[num];&#xD;
+&#xD;
+						for (int i = 0; i &lt; num; i++) {&#xD;
+&#xD;
+							arr[i] = rd.nextInt(30) + 1;&#xD;
+							for (int j = 0; j &lt; i; j++) {&#xD;
+								if (arr[i] == arr[j]) {&#xD;
+									i--;&#xD;
+								} else {&#xD;
+									for (int k = 0; k &lt; result.size(); k++) {&#xD;
+										if (result.get(k).equals(arr[i] + &quot;&quot;)) {&#xD;
+											i--;&#xD;
+										}&#xD;
+									}&#xD;
+								}&#xD;
+&#xD;
+							}&#xD;
+						}&#xD;
+&#xD;
+						// 아래 코드에, ar배열과 새로이 뽑은 선수들도함께 출력&#xD;
+&#xD;
+						for (int i = 0; i &lt; 80; i++)&#xD;
+							System.out.println(&quot;\n&quot;);&#xD;
+&#xD;
+						for (int i = 1; i &lt;= result.size(); i++) {&#xD;
+							System.out.print(&quot;[&quot; + i + &quot;]&quot; + &quot;\t&quot;);&#xD;
+						}&#xD;
+						for (int i = result.size() + 1; i &lt;= result.size() + num; i++) {&#xD;
+							System.out.print(&quot;[&quot; + i + &quot;]&quot; + &quot;\t&quot;);&#xD;
+						}&#xD;
+						System.out.println();&#xD;
+						for (int i = 0; i &lt; result.size(); i++) {&#xD;
+							AllPlayer player = gp.selectPlayer(Integer.parseInt(result.get(i) + &quot;&quot;));&#xD;
+							System.out.print(player.getName() + &quot;\t&quot;);&#xD;
+						}&#xD;
+						for (int i = result.size(); i &lt; result.size() + num; i++) {&#xD;
+							AllPlayer player = gp.selectPlayer(arr[i - result.size()]);&#xD;
+							System.out.print(player.getName() + &quot;\t&quot;);&#xD;
+						}&#xD;
+						System.out.println();&#xD;
+						for (int i = 0; i &lt; result.size(); i++) {&#xD;
+							AllPlayer player = gp.selectPlayer(Integer.parseInt(result.get(i)));&#xD;
+							System.out.print(player.getStat() + &quot;\t&quot;);&#xD;
+&#xD;
+						}&#xD;
+						for (int i = result.size(); i &lt; result.size() + num; i++) {&#xD;
+							AllPlayer player = gp.selectPlayer(arr[i - result.size()]);&#xD;
+							System.out.print(player.getStat() + &quot;\t&quot;);&#xD;
+							gp.playerRegist(mb.getId(), player.getId());&#xD;
+&#xD;
+						}&#xD;
+						System.out.println();&#xD;
+						System.out.println(&quot;↑ 내 선수들&quot;);&#xD;
+&#xD;
+						int count = mb.getPick();&#xD;
+						for (int i = 0; i &lt; num; i++) {&#xD;
+							--count;&#xD;
+						}&#xD;
+						gp.playerPickRegist(mb.getId(), count); // 뽑은 선수들 해당하는 회원에게 저장&#xD;
+						mb.setPick(count); // 뽑은 횟수만큼 줄어듬.&#xD;
+						key = 5;&#xD;
+&#xD;
+						break;&#xD;
+&#xD;
+					} else {&#xD;
+						System.out.println(&quot;뽑을 수 있는 선수가 없습니다.&quot;);&#xD;
+						try {&#xD;
+							Thread.sleep(500);&#xD;
+						} catch (InterruptedException e) {&#xD;
+							e.printStackTrace();&#xD;
+						}&#xD;
+						break;&#xD;
+					}&#xD;
+				case 2:&#xD;
+					//내가 가지고있는 선수들 한 번 출력해주기.&#xD;
+					&#xD;
+					&#xD;
+					//내가 가지고있는 선수들 번호를 int배열에 저장				&#xD;
+					if (gp.havePlayer(mb.getId())) {&#xD;
+						gp.battlePlayer(mb.getId(), result);&#xD;
+					} else {&#xD;
+						System.out.println(&quot;출전할 선수가 없습니다&quot;);&#xD;
+						System.out.println(&quot;게임을 종료합니다.&quot;);&#xD;
+						try {&#xD;
+							Thread.sleep(500);&#xD;
+						} catch (InterruptedException e) {&#xD;
+							e.printStackTrace();&#xD;
+						}&#xD;
+&#xD;
+					}&#xD;
+					// 어디가 안되실까용?? 잠시만요 하나만 확인하고 바로 말씀드릴게요넹&#xD;
+					// 이거 멤버에서 강태율로 나오는데 그 친구는 다른 아이디에요&#xD;
+					/*&#xD;
+					 * System.out.print(&quot;출전할 선수를 골라주세요 >> &quot;); int pick = sc.nextInt();&#xD;
+					 */&#xD;
+					//int배열의 index는 내가 선택한 번호-1&#xD;
+					//ex)&#xD;
+					//저 오류가 해결을 어떻게 해야하나 싶어서요.&#xD;
+					//[1]추신수 [2]박찬호&#xD;
+					//추신수 아이디가 들어있는 배열은, arr[0] = 추신수번호.&#xD;
+					//박찬호 아이디가 들어있는 배열은, arr[1] = 박찬호 번호. &#xD;
+					//위에 arr[인덱스]는, 내가 선택한 번호-1임. arr[내가선택한 번호 -1]&#xD;
+					//이것을 이용하면 될거같습니당&#xD;
+						&#xD;
+					//gp.battlePlayer(선수번호) 형태로 써주면 될거같아요.&#xD;
+					&#xD;
+					//while문 걸어주어서, 해당하는 조건이 되었을 시, while문 빠져나올 수 있도록. &#xD;
+					//빠져나오면서, db에 member테이블에 rank 점수 줄 수 있도록.&#xD;
+					try {&#xD;
+						Thread.sleep(500);&#xD;
+					} catch (InterruptedException e) {&#xD;
+						e.printStackTrace();&#xD;
+					}&#xD;
+			&#xD;
+					break;&#xD;
+				case 3:&#xD;
+					&#xD;
+					gp.getRank();&#xD;
+&#xD;
+					break;&#xD;
+				case 4:&#xD;
+					System.out.println(&quot;종료합니다.&quot;);&#xD;
+					try {&#xD;
+						Thread.sleep(500);&#xD;
+					} catch (InterruptedException e) {&#xD;
+						e.printStackTrace();&#xD;
+					}&#xD;
+					System.exit(0);&#xD;
+&#xD;
+					break;&#xD;
+				default:&#xD;
+					System.out.println(&quot;올바른 숫자를 입력하세요.&quot;);&#xD;
+				}&#xD;
+			}&#xD;
+		</body>
+        </ownedBehavior>
+        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_4YqKozYcEeyQU9d2fjnV0g" name="openingPrint1" specification="_4WaH4TYcEeyQU9d2fjnV0g">
+          <language>java</language>
+          <body>for (int i = 0; i &lt; 80; i++)&#xD;
+			System.out.println(&quot;\n&quot;);&#xD;
+		System.out.println(&quot;┌──┬────────────────────────────────────────────┬──┐&quot;);&#xD;
+		System.out.println(&quot;│  │           ●○●○ BaseBall Game ○●○●    \t│  │&quot;);&#xD;
+		System.out.println(&quot;│  │                                      \t│  │&quot;);&#xD;
+		System.out.println(&quot;│  │                                      \t│  │&quot;);&#xD;
+		System.out.println(&quot;│  │                                      \t│  │&quot;);&#xD;
+		System.out.println(&quot;└──┴────────────────────────────────────────────┴──┘&quot;);&#xD;
+&#xD;
+		try {&#xD;
+			Thread.sleep(1000);&#xD;
+		} catch (InterruptedException e) {&#xD;
+			e.printStackTrace();&#xD;
+		}&#xD;
+	</body>
+        </ownedBehavior>
+        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_4YqKpDYcEeyQU9d2fjnV0g" name="openingPrint2" specification="_4Wau8DYcEeyQU9d2fjnV0g">
+          <language>java</language>
+          <body>for (int i = 0; i &lt; 80; i++)&#xD;
+			System.out.println(&quot;\n&quot;);&#xD;
+		System.out.println(&quot;┌──┬────────────────────────────────────────────┬──┐&quot;);&#xD;
+		System.out.println(&quot;│  │           ○●○● BaseBall Game ●○●○    \t│  │&quot;);&#xD;
+		System.out.println(&quot;│  │                                      \t│  │&quot;);&#xD;
+		System.out.println(&quot;│  │                                      \t│  │&quot;);&#xD;
+		System.out.println(&quot;│  │                                      \t│  │&quot;);&#xD;
+		System.out.println(&quot;└──┴────────────────────────────────────────────┴──┘&quot;);&#xD;
+&#xD;
+		try {&#xD;
+			Thread.sleep(1000);&#xD;
+		} catch (InterruptedException e) {&#xD;
+			e.printStackTrace();&#xD;
+		}&#xD;
+	</body>
+        </ownedBehavior>
+        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_4YqKpTYcEeyQU9d2fjnV0g" name="mainPrint" specification="_4Wau8TYcEeyQU9d2fjnV0g">
+          <language>java</language>
+          <body>for (int i = 0; i &lt; 80; i++)&#xD;
+			System.out.println(&quot;\n&quot;);&#xD;
+		System.out.println(&quot;┌──┬────────────────────────────────────────────┬──┐&quot;);&#xD;
+		System.out.println(&quot;│  │           ●○●○ BaseBall Game ○●○●    \t│  │&quot;);&#xD;
+		System.out.println(&quot;│  │                 [야 구 게 임]          \t│  │&quot;);&#xD;
+		System.out.println(&quot;│  │                                      \t│  │&quot;);&#xD;
+		System.out.println(&quot;│  │      &lt;[1]로그인>  &lt;[2]회원가입>  &lt;[3]종료>\t│  │&quot;);&#xD;
+		System.out.println(&quot;└──┴────────────────────────────────────────────┴──┘&quot;);&#xD;
+		System.out.print(&quot;>>&quot;);&#xD;
+	</body>
+        </ownedBehavior>
+        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_4YqxsDYcEeyQU9d2fjnV0g" name="loginPrint" specification="_4Wau8jYcEeyQU9d2fjnV0g">
+          <language>java</language>
+          <body>for (int i = 0; i &lt; 80; i++)&#xD;
+			System.out.println(&quot;\n&quot;);&#xD;
+		System.out.println(&quot;┌──┬────────────────────────────────────────────┬──┐&quot;);&#xD;
+		System.out.println(&quot;│  │           ●○●○ BaseBall Game ○●○●    \t│  │&quot;);&#xD;
+		System.out.println(&quot;│  │                  [로 그 인]          \t│  │&quot;);&#xD;
+		System.out.println(&quot;│  │                                      \t│  │&quot;);&#xD;
+		System.out.println(&quot;│  │      아이디, 비밀번호를 입력해주세요..    \t│  │&quot;);&#xD;
+		System.out.println(&quot;└──┴────────────────────────────────────────────┴──┘&quot;);&#xD;
+&#xD;
+	</body>
+        </ownedBehavior>
+        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_4YqxsTYcEeyQU9d2fjnV0g" name="registerPrint" specification="_4WbWADYcEeyQU9d2fjnV0g">
+          <language>java</language>
+          <body>for (int i = 0; i &lt; 80; i++)&#xD;
+			System.out.println(&quot;\n&quot;);&#xD;
+		System.out.println(&quot;┌──┬────────────────────────────────────────────┬──┐&quot;);&#xD;
+		System.out.println(&quot;│  │           ●○●○ BaseBall Game ○●○●    \t│  │&quot;);&#xD;
+		System.out.println(&quot;│  │                 [회 원 가 입]          \t│  │&quot;);&#xD;
+		System.out.println(&quot;│  │                                      \t│  │&quot;);&#xD;
+		System.out.println(&quot;│  │   사용하실 아이디, 비밀번호를 입력해주세요~ ^^// \t│  │&quot;);&#xD;
+		System.out.println(&quot;└──┴────────────────────────────────────────────┴──┘&quot;);&#xD;
+&#xD;
+	</body>
+        </ownedBehavior>
+        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_4YqxsjYcEeyQU9d2fjnV0g" name="mainLoginPrint" specification="_4WbWATYcEeyQU9d2fjnV0g">
+          <language>java</language>
+          <body>for (int i = 0; i &lt; 80; i++)&#xD;
+			System.out.println(&quot;\n&quot;);&#xD;
+		System.out.println(&quot;┌──┬────────────────────────────────────────────┬──┐&quot;);&#xD;
+		System.out.println(&quot;│  │           ●○●○ BaseBall Game ○●○●    \t│  │&quot;);&#xD;
+		System.out.println(&quot;│  │      	  &quot; + mb.getId() + &quot;님 환영합니다!!&quot; + &quot;\t\t│  │&quot;);&#xD;
+		System.out.println(&quot;│  │         &quot; + &quot;현재 뽑을 수 있는 수는 &quot; + mb.getPick() + &quot;개 있습니다! \t│  │&quot;);&#xD;
+		System.out.println(&quot;│  │&lt;[1]선수뽑기> &lt;[2]게임시작> &lt;[3]순위확인> &lt;[4]종료>│  │&quot;);&#xD;
+		System.out.println(&quot;└──┴────────────────────────────────────────────┴──┘&quot;);&#xD;
+	</body>
+        </ownedBehavior>
+        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_4YqxszYcEeyQU9d2fjnV0g" name="mainLoginPrintNoClean" specification="_4WbWAjYcEeyQU9d2fjnV0g">
+          <language>java</language>
+          <body>System.out.println(&quot;┌──┬────────────────────────────────────────────┬──┐&quot;);&#xD;
+		System.out.println(&quot;│  │           ●○●○ BaseBall Game ○●○●    \t│  │&quot;);&#xD;
+		System.out.println(&quot;│  │      	  &quot; + mb.getId() + &quot;님 환영합니다!!&quot; + &quot;\t\t│  │&quot;);&#xD;
+		System.out.println(&quot;│  │         &quot; + &quot;현재 뽑을 수 있는 수는 &quot; + mb.getPick() + &quot;개 있습니다! \t│  │&quot;);&#xD;
+		System.out.println(&quot;│  │&lt;[1]선수뽑기> &lt;[2]게임시작> &lt;[3]순위확인> &lt;[4]종료>│  │&quot;);&#xD;
+		System.out.println(&quot;└──┴────────────────────────────────────────────┴──┘&quot;);&#xD;
+	</body>
+        </ownedBehavior>
+        <ownedOperation xmi:id="_4WY5wDYcEeyQU9d2fjnV0g" name="UserInterFace" method="_4YqKoDYcEeyQU9d2fjnV0g">
+          <eAnnotations xmi:id="_4WZg0DYcEeyQU9d2fjnV0g" source="http://www.eclipse.org/uml2/2.0.0/UML">
+            <details xmi:id="_4WZg0TYcEeyQU9d2fjnV0g" key="create"/>
+          </eAnnotations>
+          <ownedParameter xmi:id="_4WZg0jYcEeyQU9d2fjnV0g" type="_4WXEkDYcEeyQU9d2fjnV0g" direction="return"/>
+        </ownedOperation>
+        <ownedOperation xmi:id="_4WaH4DYcEeyQU9d2fjnV0g" name="start" method="_4YqKojYcEeyQU9d2fjnV0g"/>
+        <ownedOperation xmi:id="_4WaH4TYcEeyQU9d2fjnV0g" name="openingPrint1" method="_4YqKozYcEeyQU9d2fjnV0g"/>
+        <ownedOperation xmi:id="_4Wau8DYcEeyQU9d2fjnV0g" name="openingPrint2" method="_4YqKpDYcEeyQU9d2fjnV0g"/>
+        <ownedOperation xmi:id="_4Wau8TYcEeyQU9d2fjnV0g" name="mainPrint" visibility="private" method="_4YqKpTYcEeyQU9d2fjnV0g"/>
+        <ownedOperation xmi:id="_4Wau8jYcEeyQU9d2fjnV0g" name="loginPrint" visibility="private" method="_4YqxsDYcEeyQU9d2fjnV0g"/>
+        <ownedOperation xmi:id="_4WbWADYcEeyQU9d2fjnV0g" name="registerPrint" visibility="private" method="_4YqxsTYcEeyQU9d2fjnV0g"/>
+        <ownedOperation xmi:id="_4WbWATYcEeyQU9d2fjnV0g" name="mainLoginPrint" visibility="private" method="_4YqxsjYcEeyQU9d2fjnV0g"/>
+        <ownedOperation xmi:id="_4WbWAjYcEeyQU9d2fjnV0g" name="mainLoginPrintNoClean" visibility="private" method="_4YqxszYcEeyQU9d2fjnV0g"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_4Yz7oDYcEeyQU9d2fjnV0g" name="" memberEnd="_4Yz7oTYcEeyQU9d2fjnV0g _4YEUwDYcEeyQU9d2fjnV0g">
+        <ownedEnd xmi:id="_4Yz7oTYcEeyQU9d2fjnV0g" name="" type="_4V5xkDYcEeyQU9d2fjnV0g" association="_4Yz7oDYcEeyQU9d2fjnV0g"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_4Y2-8DYcEeyQU9d2fjnV0g" name="" memberEnd="_4Y2-8TYcEeyQU9d2fjnV0g _4YE70TYcEeyQU9d2fjnV0g">
+        <ownedEnd xmi:id="_4Y2-8TYcEeyQU9d2fjnV0g" name="" type="_4V5xkDYcEeyQU9d2fjnV0g" association="_4Y2-8DYcEeyQU9d2fjnV0g"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_4Y3mATYcEeyQU9d2fjnV0g" name="" memberEnd="_4Y3mAjYcEeyQU9d2fjnV0g _4YFi4TYcEeyQU9d2fjnV0g">
+        <ownedEnd xmi:id="_4Y3mAjYcEeyQU9d2fjnV0g" name="" type="_4V5xkDYcEeyQU9d2fjnV0g" association="_4Y3mATYcEeyQU9d2fjnV0g"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_4Y4NETYcEeyQU9d2fjnV0g" name="" memberEnd="_4Y4NEjYcEeyQU9d2fjnV0g _4YGJ8TYcEeyQU9d2fjnV0g">
+        <ownedEnd xmi:id="_4Y4NEjYcEeyQU9d2fjnV0g" name="" type="_4V5xkDYcEeyQU9d2fjnV0g" association="_4Y4NETYcEeyQU9d2fjnV0g"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_4Y40ITYcEeyQU9d2fjnV0g" name="" memberEnd="_4Y40IjYcEeyQU9d2fjnV0g _4YGxATYcEeyQU9d2fjnV0g">
+        <ownedEnd xmi:id="_4Y40IjYcEeyQU9d2fjnV0g" name="" type="_4V5xkDYcEeyQU9d2fjnV0g" association="_4Y40ITYcEeyQU9d2fjnV0g"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_4Y6CQTYcEeyQU9d2fjnV0g" name="" memberEnd="_4Y6CQjYcEeyQU9d2fjnV0g _4YHYEDYcEeyQU9d2fjnV0g">
+        <ownedEnd xmi:id="_4Y6CQjYcEeyQU9d2fjnV0g" name="" type="_4V5xkDYcEeyQU9d2fjnV0g" association="_4Y6CQTYcEeyQU9d2fjnV0g"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_4Y6pUTYcEeyQU9d2fjnV0g" name="" memberEnd="_4Y6pUjYcEeyQU9d2fjnV0g _4YHYEzYcEeyQU9d2fjnV0g">
+        <ownedEnd xmi:id="_4Y6pUjYcEeyQU9d2fjnV0g" name="" type="_4V5xkDYcEeyQU9d2fjnV0g" association="_4Y6pUTYcEeyQU9d2fjnV0g"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_4Y7QYTYcEeyQU9d2fjnV0g" name="" memberEnd="_4Y7QYjYcEeyQU9d2fjnV0g _4YH_ITYcEeyQU9d2fjnV0g">
+        <ownedEnd xmi:id="_4Y7QYjYcEeyQU9d2fjnV0g" name="" type="_4V5xkDYcEeyQU9d2fjnV0g" association="_4Y7QYTYcEeyQU9d2fjnV0g"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_4Y73cTYcEeyQU9d2fjnV0g" name="" memberEnd="_4Y73cjYcEeyQU9d2fjnV0g _4YJ0UDYcEeyQU9d2fjnV0g">
+        <ownedEnd xmi:id="_4Y73cjYcEeyQU9d2fjnV0g" name="" type="_4WH0ADYcEeyQU9d2fjnV0g" association="_4Y73cTYcEeyQU9d2fjnV0g"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_4Y9FkDYcEeyQU9d2fjnV0g" name="" memberEnd="_4Y9FkTYcEeyQU9d2fjnV0g _4YKbYTYcEeyQU9d2fjnV0g">
+        <ownedEnd xmi:id="_4Y9FkTYcEeyQU9d2fjnV0g" name="" type="_4WH0ADYcEeyQU9d2fjnV0g" association="_4Y9FkDYcEeyQU9d2fjnV0g"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_4Y9soTYcEeyQU9d2fjnV0g" name="" memberEnd="_4Y9sojYcEeyQU9d2fjnV0g _4YLCcTYcEeyQU9d2fjnV0g">
+        <ownedEnd xmi:id="_4Y9sojYcEeyQU9d2fjnV0g" name="" type="_4WH0ADYcEeyQU9d2fjnV0g" association="_4Y9soTYcEeyQU9d2fjnV0g"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_4Y9spDYcEeyQU9d2fjnV0g" name="" memberEnd="_4Y9spTYcEeyQU9d2fjnV0g _4YLCdDYcEeyQU9d2fjnV0g">
+        <ownedEnd xmi:id="_4Y9spTYcEeyQU9d2fjnV0g" name="" type="_4WH0ADYcEeyQU9d2fjnV0g" association="_4Y9spDYcEeyQU9d2fjnV0g"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_4Y-TsTYcEeyQU9d2fjnV0g" name="" memberEnd="_4Y-TsjYcEeyQU9d2fjnV0g _4YSXMDYcEeyQU9d2fjnV0g">
+        <ownedEnd xmi:id="_4Y-TsjYcEeyQU9d2fjnV0g" name="" type="_4WXEkDYcEeyQU9d2fjnV0g" association="_4Y-TsTYcEeyQU9d2fjnV0g"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_4Y-6wTYcEeyQU9d2fjnV0g" name="" memberEnd="_4Y-6wjYcEeyQU9d2fjnV0g _4YTlUDYcEeyQU9d2fjnV0g">
+        <ownedEnd xmi:id="_4Y-6wjYcEeyQU9d2fjnV0g" name="" type="_4WXEkDYcEeyQU9d2fjnV0g" association="_4Y-6wTYcEeyQU9d2fjnV0g"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_4Y-6xDYcEeyQU9d2fjnV0g" name="" memberEnd="_4Y-6xTYcEeyQU9d2fjnV0g _4YUMYTYcEeyQU9d2fjnV0g">
+        <ownedEnd xmi:id="_4Y-6xTYcEeyQU9d2fjnV0g" name="" type="_4WXEkDYcEeyQU9d2fjnV0g" association="_4Y-6xDYcEeyQU9d2fjnV0g"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_4Y_h0TYcEeyQU9d2fjnV0g" name="" memberEnd="_4Y_h0jYcEeyQU9d2fjnV0g _4YUMYzYcEeyQU9d2fjnV0g">
+        <ownedEnd xmi:id="_4Y_h0jYcEeyQU9d2fjnV0g" name="" type="_4WXEkDYcEeyQU9d2fjnV0g" association="_4Y_h0TYcEeyQU9d2fjnV0g"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_4ZAI4TYcEeyQU9d2fjnV0g" name="" memberEnd="_4ZAI4jYcEeyQU9d2fjnV0g _4YUzcTYcEeyQU9d2fjnV0g">
+        <ownedEnd xmi:id="_4ZAI4jYcEeyQU9d2fjnV0g" name="" type="_4WXEkDYcEeyQU9d2fjnV0g" association="_4ZAI4TYcEeyQU9d2fjnV0g"/>
+      </packagedElement>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Package" xmi:id="_4VKKsDYcEeyQU9d2fjnV0g" name="java">
+      <packagedElement xmi:type="uml:Package" xmi:id="_4VKxwDYcEeyQU9d2fjnV0g" name="sql">
+        <packagedElement xmi:type="uml:Interface" xmi:id="_4XaNcDYcEeyQU9d2fjnV0g" name="Connection"/>
+        <packagedElement xmi:type="uml:Class" xmi:id="_4XcCoDYcEeyQU9d2fjnV0g" name="DriverManager"/>
+        <packagedElement xmi:type="uml:Interface" xmi:id="_4XcpsTYcEeyQU9d2fjnV0g" name="PreparedStatement"/>
+        <packagedElement xmi:type="uml:Interface" xmi:id="_4Xd30DYcEeyQU9d2fjnV0g" name="ResultSet"/>
+        <packagedElement xmi:type="uml:Class" xmi:id="_4XftATYcEeyQU9d2fjnV0g" name="SQLException"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Package" xmi:id="_4VKxwTYcEeyQU9d2fjnV0g" name="util">
+        <packagedElement xmi:type="uml:Class" xmi:id="_4Xee4TYcEeyQU9d2fjnV0g" name="Random"/>
+        <packagedElement xmi:type="uml:Class" xmi:id="_4Xg7ITYcEeyQU9d2fjnV0g" name="ArrayList"/>
+        <packagedElement xmi:type="uml:Interface" xmi:id="_4XiwUDYcEeyQU9d2fjnV0g" name="List"/>
+        <packagedElement xmi:type="uml:Class" xmi:id="_4XjXYTYcEeyQU9d2fjnV0g" name="Scanner"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Package" xmi:id="_4VVJ0DYcEeyQU9d2fjnV0g" name="io">
+        <packagedElement xmi:type="uml:Class" xmi:id="_4Xu9kDYcEeyQU9d2fjnV0g" name="File"/>
+      </packagedElement>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Package" xmi:id="_4VVJ0TYcEeyQU9d2fjnV0g" name="javax">
+      <packagedElement xmi:type="uml:Package" xmi:id="_4VVw4DYcEeyQU9d2fjnV0g" name="sound">
+        <packagedElement xmi:type="uml:Package" xmi:id="_4VVw4TYcEeyQU9d2fjnV0g" name="sampled">
+          <packagedElement xmi:type="uml:Class" xmi:id="_4XwLsTYcEeyQU9d2fjnV0g" name="AudioInputStream"/>
+          <packagedElement xmi:type="uml:Class" xmi:id="_4XwywTYcEeyQU9d2fjnV0g" name="AudioSystem"/>
+          <packagedElement xmi:type="uml:Interface" xmi:id="_4XxZ0TYcEeyQU9d2fjnV0g" name="Clip"/>
+        </packagedElement>
+      </packagedElement>
+    </packagedElement>
+    <profileApplication xmi:id="_4CnCIDYcEeyQU9d2fjnV0g">
+      <eAnnotations xmi:id="_4CnCITYcEeyQU9d2fjnV0g" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="pathmap://UMLLAB_PROFILES/UMLLab.profile.uml#UMLLabProfile-Annotation_2-UMLLabProfile"/>
+      </eAnnotations>
+      <appliedProfile href="pathmap://UMLLAB_PROFILES/UMLLab.profile.uml#UMLLabProfile"/>
+    </profileApplication>
+  </uml:Model>
+  <UMLLabProfile:TargetLanguage xmi:id="_4CnpMDYcEeyQU9d2fjnV0g" base_Package="_4B3bQDYcEeyQU9d2fjnV0g">
+    <languageName>java</languageName>
+  </UMLLabProfile:TargetLanguage>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_4VxOsDYcEeyQU9d2fjnV0g" base_Element="_4VvZgDYcEeyQU9d2fjnV0g"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_4V2HMDYcEeyQU9d2fjnV0g" base_Element="_4V1gIDYcEeyQU9d2fjnV0g"/>
+  <UMLLabProfile:Annotations xmi:id="_4V4jcDYcEeyQU9d2fjnV0g" base_Element="_4V1gIDYcEeyQU9d2fjnV0g">
+    <annotations xmi:id="_4V4jcTYcEeyQU9d2fjnV0g" name="Override"/>
+  </UMLLabProfile:Annotations>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_4WV2cTYcEeyQU9d2fjnV0g" base_Element="_4WVPYjYcEeyQU9d2fjnV0g"/>
+  <UMLLabProfile:Annotations xmi:id="_4WWdgDYcEeyQU9d2fjnV0g" base_Element="_4WVPYjYcEeyQU9d2fjnV0g">
+    <annotations xmi:id="_4WWdgTYcEeyQU9d2fjnV0g" name="Override"/>
+  </UMLLabProfile:Annotations>
+  <UMLLabProfile:Reference xmi:id="_4Xa0gDYcEeyQU9d2fjnV0g" base_Element="_4XaNcDYcEeyQU9d2fjnV0g"/>
+  <UMLLabProfile:Reference xmi:id="_4XcpsDYcEeyQU9d2fjnV0g" base_Element="_4XcCoDYcEeyQU9d2fjnV0g"/>
+  <UMLLabProfile:Reference xmi:id="_4XdQwDYcEeyQU9d2fjnV0g" base_Element="_4XcpsTYcEeyQU9d2fjnV0g"/>
+  <UMLLabProfile:Reference xmi:id="_4Xee4DYcEeyQU9d2fjnV0g" base_Element="_4Xd30DYcEeyQU9d2fjnV0g"/>
+  <UMLLabProfile:Reference xmi:id="_4XftADYcEeyQU9d2fjnV0g" base_Element="_4Xee4TYcEeyQU9d2fjnV0g"/>
+  <UMLLabProfile:Reference xmi:id="_4Xg7IDYcEeyQU9d2fjnV0g" base_Element="_4XftATYcEeyQU9d2fjnV0g"/>
+  <UMLLabProfile:Reference xmi:id="_4XiJQDYcEeyQU9d2fjnV0g" base_Element="_4Xg7ITYcEeyQU9d2fjnV0g"/>
+  <UMLLabProfile:Reference xmi:id="_4XjXYDYcEeyQU9d2fjnV0g" base_Element="_4XiwUDYcEeyQU9d2fjnV0g"/>
+  <UMLLabProfile:Reference xmi:id="_4Xj-cDYcEeyQU9d2fjnV0g" base_Element="_4XjXYTYcEeyQU9d2fjnV0g"/>
+  <UMLLabProfile:Reference xmi:id="_4XwLsDYcEeyQU9d2fjnV0g" base_Element="_4Xu9kDYcEeyQU9d2fjnV0g"/>
+  <UMLLabProfile:Reference xmi:id="_4XwywDYcEeyQU9d2fjnV0g" base_Element="_4XwLsTYcEeyQU9d2fjnV0g"/>
+  <UMLLabProfile:Reference xmi:id="_4XxZ0DYcEeyQU9d2fjnV0g" base_Element="_4XwywTYcEeyQU9d2fjnV0g"/>
+  <UMLLabProfile:Reference xmi:id="_4Xyn8DYcEeyQU9d2fjnV0g" base_Element="_4XxZ0TYcEeyQU9d2fjnV0g"/>
+  <UMLLabProfile:Generics xmi:id="_4X7K0DYcEeyQU9d2fjnV0g" genericsValue="String" base_Element="_4X58sjYcEeyQU9d2fjnV0g"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_4YE70DYcEeyQU9d2fjnV0g" base_Element="_4YEUwDYcEeyQU9d2fjnV0g"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_4YFi4DYcEeyQU9d2fjnV0g" base_Element="_4YE70TYcEeyQU9d2fjnV0g"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_4YGJ8DYcEeyQU9d2fjnV0g" base_Element="_4YFi4TYcEeyQU9d2fjnV0g"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_4YGxADYcEeyQU9d2fjnV0g" base_Element="_4YGJ8TYcEeyQU9d2fjnV0g"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_4YGxAzYcEeyQU9d2fjnV0g" base_Element="_4YGxATYcEeyQU9d2fjnV0g"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_4YHYEjYcEeyQU9d2fjnV0g" base_Element="_4YHYEDYcEeyQU9d2fjnV0g"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_4YH_IDYcEeyQU9d2fjnV0g" base_Element="_4YHYEzYcEeyQU9d2fjnV0g"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_4YImMDYcEeyQU9d2fjnV0g" base_Element="_4YH_ITYcEeyQU9d2fjnV0g"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_4YImMzYcEeyQU9d2fjnV0g" base_Element="_4YImMTYcEeyQU9d2fjnV0g"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_4YJNQTYcEeyQU9d2fjnV0g" base_Element="_4YJNQDYcEeyQU9d2fjnV0g"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_4YKbYDYcEeyQU9d2fjnV0g" base_Element="_4YJ0UDYcEeyQU9d2fjnV0g"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_4YLCcDYcEeyQU9d2fjnV0g" base_Element="_4YKbYTYcEeyQU9d2fjnV0g"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_4YLCczYcEeyQU9d2fjnV0g" base_Element="_4YLCcTYcEeyQU9d2fjnV0g"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_4YOFwDYcEeyQU9d2fjnV0g" base_Element="_4YLCdDYcEeyQU9d2fjnV0g"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_4YPT4DYcEeyQU9d2fjnV0g" base_Element="_4YOs0DYcEeyQU9d2fjnV0g"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_4YQiADYcEeyQU9d2fjnV0g" base_Element="_4YPT4TYcEeyQU9d2fjnV0g"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_4YRJETYcEeyQU9d2fjnV0g" base_Element="_4YRJEDYcEeyQU9d2fjnV0g"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_4YS-QTYcEeyQU9d2fjnV0g" base_Element="_4YSXMDYcEeyQU9d2fjnV0g"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_4YUMYDYcEeyQU9d2fjnV0g" base_Element="_4YTlUDYcEeyQU9d2fjnV0g"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_4YUMYjYcEeyQU9d2fjnV0g" base_Element="_4YUMYTYcEeyQU9d2fjnV0g"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_4YUzcDYcEeyQU9d2fjnV0g" base_Element="_4YUMYzYcEeyQU9d2fjnV0g"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_4YVagTYcEeyQU9d2fjnV0g" base_Element="_4YUzcTYcEeyQU9d2fjnV0g"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_4YWBkTYcEeyQU9d2fjnV0g" base_Element="_4YVagjYcEeyQU9d2fjnV0g"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_4YWooDYcEeyQU9d2fjnV0g" base_Element="_4YWBkjYcEeyQU9d2fjnV0g"/>
+  <UMLLabProfile:Reference xmi:id="_4Y2X6DYcEeyQU9d2fjnV0g" base_Element="_4Yz7oDYcEeyQU9d2fjnV0g"/>
+  <UMLLabProfile:Reference xmi:id="_4Y3mADYcEeyQU9d2fjnV0g" base_Element="_4Y2-8DYcEeyQU9d2fjnV0g"/>
+  <UMLLabProfile:Reference xmi:id="_4Y4NEDYcEeyQU9d2fjnV0g" base_Element="_4Y3mATYcEeyQU9d2fjnV0g"/>
+  <UMLLabProfile:Reference xmi:id="_4Y40IDYcEeyQU9d2fjnV0g" base_Element="_4Y4NETYcEeyQU9d2fjnV0g"/>
+  <UMLLabProfile:Reference xmi:id="_4Y6CQDYcEeyQU9d2fjnV0g" base_Element="_4Y40ITYcEeyQU9d2fjnV0g"/>
+  <UMLLabProfile:Reference xmi:id="_4Y6pUDYcEeyQU9d2fjnV0g" base_Element="_4Y6CQTYcEeyQU9d2fjnV0g"/>
+  <UMLLabProfile:Reference xmi:id="_4Y7QYDYcEeyQU9d2fjnV0g" base_Element="_4Y6pUTYcEeyQU9d2fjnV0g"/>
+  <UMLLabProfile:Reference xmi:id="_4Y73cDYcEeyQU9d2fjnV0g" base_Element="_4Y7QYTYcEeyQU9d2fjnV0g"/>
+  <UMLLabProfile:Reference xmi:id="_4Y8egDYcEeyQU9d2fjnV0g" base_Element="_4Y73cTYcEeyQU9d2fjnV0g"/>
+  <UMLLabProfile:Reference xmi:id="_4Y9FkjYcEeyQU9d2fjnV0g" base_Element="_4Y9FkDYcEeyQU9d2fjnV0g"/>
+  <UMLLabProfile:Reference xmi:id="_4Y9sozYcEeyQU9d2fjnV0g" base_Element="_4Y9soTYcEeyQU9d2fjnV0g"/>
+  <UMLLabProfile:Reference xmi:id="_4Y-TsDYcEeyQU9d2fjnV0g" base_Element="_4Y9spDYcEeyQU9d2fjnV0g"/>
+  <UMLLabProfile:Reference xmi:id="_4Y-6wDYcEeyQU9d2fjnV0g" base_Element="_4Y-TsTYcEeyQU9d2fjnV0g"/>
+  <UMLLabProfile:Reference xmi:id="_4Y-6wzYcEeyQU9d2fjnV0g" base_Element="_4Y-6wTYcEeyQU9d2fjnV0g"/>
+  <UMLLabProfile:Reference xmi:id="_4Y_h0DYcEeyQU9d2fjnV0g" base_Element="_4Y-6xDYcEeyQU9d2fjnV0g"/>
+  <UMLLabProfile:Reference xmi:id="_4ZAI4DYcEeyQU9d2fjnV0g" base_Element="_4Y_h0TYcEeyQU9d2fjnV0g"/>
+  <UMLLabProfile:Reference xmi:id="_4ZAI5DYcEeyQU9d2fjnV0g" base_Element="_4ZAI4TYcEeyQU9d2fjnV0g"/>
+</xmi:XMI>

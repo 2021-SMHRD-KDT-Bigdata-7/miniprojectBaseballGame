@@ -83,7 +83,7 @@ public class UserInterFace {
 						System.out.println("로그인에 성공하였습니다...");
 
 						try {
-							Thread.sleep(1000);
+							Thread.sleep(500);
 						} catch (InterruptedException e) {
 							e.printStackTrace();
 						}
@@ -116,7 +116,7 @@ public class UserInterFace {
 						System.out.println("회원가입에 성공하였습니다!!");
 						reRegister = "n";
 						try {
-							Thread.sleep(1000);
+							Thread.sleep(500);
 						} catch (InterruptedException e) {
 							e.printStackTrace();
 						}
@@ -237,7 +237,7 @@ public class UserInterFace {
 					} else {
 						System.out.println("뽑을 수 있는 선수가 없습니다.");
 						try {
-							Thread.sleep(1000);
+							Thread.sleep(500);
 						} catch (InterruptedException e) {
 							e.printStackTrace();
 						}
@@ -254,7 +254,7 @@ public class UserInterFace {
 						System.out.println("출전할 선수가 없습니다");
 						System.out.println("게임을 종료합니다.");
 						try {
-							Thread.sleep(1000);
+							Thread.sleep(500);
 						} catch (InterruptedException e) {
 							e.printStackTrace();
 						}
@@ -279,7 +279,7 @@ public class UserInterFace {
 					//while문 걸어주어서, 해당하는 조건이 되었을 시, while문 빠져나올 수 있도록. 
 					//빠져나오면서, db에 member테이블에 rank 점수 줄 수 있도록.
 					try {
-						Thread.sleep(1000);
+						Thread.sleep(500);
 					} catch (InterruptedException e) {
 						e.printStackTrace();
 					}
@@ -293,7 +293,7 @@ public class UserInterFace {
 				case 4:
 					System.out.println("종료합니다.");
 					try {
-						Thread.sleep(1000);
+						Thread.sleep(500);
 					} catch (InterruptedException e) {
 						e.printStackTrace();
 					}

@@ -150,7 +150,11 @@ public class UserInterFace {
 				break;
 			default:
 				System.out.println("1,2,3 중에 한 숫자만 써주세요.");
-
+				try {
+					Thread.sleep(1000);
+				} catch (InterruptedException e) {
+					e.printStackTrace();
+				}
 			}
 
 		}

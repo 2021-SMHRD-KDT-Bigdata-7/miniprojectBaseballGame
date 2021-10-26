@@ -15,7 +15,7 @@ public class AllPlayer {
 		this.name = name;
 		this.stat = stat;
 	}
-
+///vntnl
 	public String getId() {
 		return id;
 	}

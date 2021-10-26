@@ -222,7 +222,7 @@ public class GamePlay {
 				while (rs.next()) {
 					sco = rs.getInt(1);
 				}
-
+//sss
 				//잠시만요 뭐 하나만 확인해봐도 될까요? -나민주
 				//넹넹 그 민주씨꺼랑 합쳐도됩니당 필요한거있으면 역
 

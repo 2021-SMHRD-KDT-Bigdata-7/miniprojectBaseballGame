@@ -283,8 +283,7 @@ public class UserInterFace {
 					} catch (InterruptedException e) {
 						e.printStackTrace();
 					}
-					System.exit(0);
-
+			
 					break;
 				case 3:
 					

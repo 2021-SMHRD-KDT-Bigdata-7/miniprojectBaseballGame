@@ -161,7 +161,7 @@ public class GamePlay {
 						int enemy = 0;
 //						sql = "select a.p_name from allplayer a where not in table myplayer m";
 //						psmt = conn.prepareStatement(sql);
-//확인 끝났습니다. 제가 따로 깃허브 하나 새로 파고 따로 푸쉬한 다음에 병합해볼게요.
+//확인 끝났습니다. 제가 따로 깃허브 하나 새로 파고 따로 푸쉬한 다음에 병합해볼게요.//
 						Random rd = new Random();
 						enemy = rd.nextInt(100) + 1;
 						System.out.println();
